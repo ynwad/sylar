@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+/home/ynwad/projects/ynwad/ynwad/CMakeFiles/rebuild_cache.dir
+/home/ynwad/projects/ynwad/ynwad/CMakeFiles/test_config.dir
+/home/ynwad/projects/ynwad/ynwad/CMakeFiles/edit_cache.dir
+/home/ynwad/projects/ynwad/ynwad/CMakeFiles/test.dir
+/home/ynwad/projects/ynwad/ynwad/CMakeFiles/sylar.dir
+=======
+/home/ynwad/workspace/ynwad/ynwad/CMakeFiles/edit_cache.dir
+/home/ynwad/workspace/ynwad/ynwad/CMakeFiles/rebuild_cache.dir
+/home/ynwad/workspace/ynwad/ynwad/CMakeFiles/ynwad.dir
+/home/ynwad/workspace/ynwad/ynwad/CMakeFiles/test.dir
+>>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c

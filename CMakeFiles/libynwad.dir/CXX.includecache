@@ -1,0 +1,86 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+<<<<<<< HEAD
+/home/sylar/workspace/sylar/sylar/log.cc
+log.h
+/home/sylar/workspace/sylar/sylar/log.h
+=======
+/home/ynwad/workspace/ynwad/ynwad/log.cc
+log.h
+/home/ynwad/workspace/ynwad/ynwad/log.h
+>>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
+map
+-
+functional
+-
+memory
+-
+
+<<<<<<< HEAD
+/home/sylar/workspace/sylar/sylar/log.h
+=======
+/home/ynwad/workspace/ynwad/ynwad/log.h
+>>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
+string
+-
+stdint.h
+-
+memory
+-
+list
+-
+sstream
+-
+fstream
+-
+iostream
+-
+vector
+-
+macro.h
+<<<<<<< HEAD
+/home/sylar/workspace/sylar/sylar/macro.h
+mutex.h
+/home/sylar/workspace/sylar/sylar/mutex.h
+
+/home/sylar/workspace/sylar/sylar/macro.h
+=======
+/home/ynwad/workspace/ynwad/ynwad/macro.h
+mutex.h
+/home/ynwad/workspace/ynwad/ynwad/mutex.h
+
+/home/ynwad/workspace/ynwad/ynwad/macro.h
+>>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
+string.h
+-
+assert.h
+-
+log.h
+<<<<<<< HEAD
+/home/sylar/workspace/sylar/sylar/log.h
+
+/home/sylar/workspace/sylar/sylar/mutex.h
+pthread.h
+-
+noncopyable.h
+/home/sylar/workspace/sylar/sylar/noncopyable.h
+
+/home/sylar/workspace/sylar/sylar/noncopyable.h
+=======
+/home/ynwad/workspace/ynwad/ynwad/log.h
+
+/home/ynwad/workspace/ynwad/ynwad/mutex.h
+pthread.h
+-
+noncopyable.h
+/home/ynwad/workspace/ynwad/ynwad/noncopyable.h
+
+/home/ynwad/workspace/ynwad/ynwad/noncopyable.h
+>>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
+

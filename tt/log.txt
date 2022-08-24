@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+2022-06-15 20:51:24	99	namemmmmmmm	256	[FATAL]	[root]	/home/sylar/workspace/sylar/sylar/tests/test.cc:32	222222222222222222222222222222  123456677
+=======
+2022-06-15 20:51:24	99	namemmmmmmm	256	[FATAL]	[root]	/home/ynwad/workspace/ynwad/ynwad/tests/test.cc:32	222222222222222222222222222222  123456677
+>>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
