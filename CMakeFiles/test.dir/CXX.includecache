@@ -6,9 +6,7 @@
 
 #IncludeRegexTransform: 
 
-<<<<<<< HEAD
-=======
-/home/ynwad/workspace/ynwad/ynwad/log.h
+/home/ynwad/workspace/sylar/log.h
 string
 -
 stdint.h
@@ -25,29 +23,72 @@ iostream
 -
 vector
 -
+map
+-
 macro.h
-/home/ynwad/workspace/ynwad/ynwad/macro.h
+/home/ynwad/workspace/sylar/macro.h
 mutex.h
-/home/ynwad/workspace/ynwad/ynwad/mutex.h
+/home/ynwad/workspace/sylar/mutex.h
+sigleton.h
+/home/ynwad/workspace/sylar/sigleton.h
+thread.h
+/home/ynwad/workspace/sylar/thread.h
 
-/home/ynwad/workspace/ynwad/ynwad/macro.h
+/home/ynwad/workspace/sylar/macro.h
 string.h
 -
 assert.h
 -
 log.h
-/home/ynwad/workspace/ynwad/ynwad/log.h
+/home/ynwad/workspace/sylar/log.h
 
-/home/ynwad/workspace/ynwad/ynwad/mutex.h
+/home/ynwad/workspace/sylar/mutex.h
+thread
+-
+functional
+-
+memory
+-
 pthread.h
 -
+semaphore.h
+-
+stdint.h
+-
+atomic
+-
+list
+-
 noncopyable.h
-/home/ynwad/workspace/ynwad/ynwad/noncopyable.h
+/home/ynwad/workspace/sylar/noncopyable.h
 
-/home/ynwad/workspace/ynwad/ynwad/noncopyable.h
+/home/ynwad/workspace/sylar/noncopyable.h
 
-/home/ynwad/workspace/ynwad/ynwad/tests/test.cc
+/home/ynwad/workspace/sylar/sigleton.h
+memory
+-
+
+/home/ynwad/workspace/sylar/tests/test.cc
 ../log.h
-/home/ynwad/workspace/ynwad/ynwad/log.h
+/home/ynwad/workspace/sylar/log.h
+../utils.h
+/home/ynwad/workspace/sylar/utils.h
 
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
+/home/ynwad/workspace/sylar/thread.h
+mutex.h
+/home/ynwad/workspace/sylar/mutex.h
+string
+-
+
+/home/ynwad/workspace/sylar/utils.h
+iostream
+-
+vector
+-
+string
+-
+iostream
+-
+sys/syscall.h
+-
+

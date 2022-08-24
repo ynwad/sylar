@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 /*
  * @Author: git config user.name
  * @Date: 2022-06-16 04:44:59
- * @LastEditors: git config user.name && git config user.email
- * @LastEditTime: 2022-06-16 04:55:01
+ * @LastEditors: Ynwad_ qingchenchn@gmail.com
+ * @LastEditTime: 2022-08-24 23:03:08
  * @FilePath: /sylar/sigleton.h
  * @Description: 
  * 
@@ -11,8 +10,6 @@
  */
 
 
-=======
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
 /**
  * @file singleton.h
  * @brief 单例模式封装
@@ -21,7 +18,7 @@
  * @date 2019-05-18
  * @copyright Copyright (c) 2019年 sylar.yin All rights reserved (www.sylar.top)
  */
-<<<<<<< HEAD
+
 
 /**
  * @description: 
@@ -34,16 +31,6 @@
 #include <memory>
 
 namespace sylar {
-=======
-#ifndef __YNWAD_SINGLETON_H__
-#define __YNWAD_SINGLETON_H__
-
-#include <memory>
-
-namespace ynwad {
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
-
-namespace {
 
 template<class T, class X, int N>
 T& GetInstanceX() {
@@ -57,8 +44,6 @@ std::shared_ptr<T> GetInstancePtr() {
     return v;
 }
 
-}
-<<<<<<< HEAD
 
 /**
  * @brief 单例模式封装类
@@ -101,6 +86,3 @@ public:
 }
 
 #endif
-=======
-}
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c

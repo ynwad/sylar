@@ -1,10 +1,6 @@
-<<<<<<< HEAD
+
 #ifndef __SYLAR_LOG_H__
 #define __SYLAR_LOG_H__
-=======
-#ifndef __YNWAD_LOG_H__
-#define __YNWAD_LOG_H__
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
 
 #include <string>
 #include <stdint.h>
@@ -17,7 +13,6 @@
 #include <map>
 #include "macro.h"
 #include "mutex.h"
-<<<<<<< HEAD
 #include "sigleton.h"
 #include "thread.h"
 
@@ -65,23 +60,14 @@
         sylar::LogEventWrap(sylar::LogEvent::ptr(new sylar::LogEvent(logger, level, \
             __FILE__, __LINE__, 0, sylar::GetThreadId(), \
             sylar::GetFiberId(), time(0), sylar::Thread::GetName()))).getEvent->format(fmt, __VA_ARGS__)
-=======
-
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
 
 /**
  * @brief 获取name的日志器
  */
-<<<<<<< HEAD
+
 #define SYLAR_LOG_NAME(name) sylar::LoggerMgr::GetInstance()->getLogger(name)
 
 namespace sylar {
-=======
-#define SYLAR_LOG_NAME(name) ynwad::LoggerMgr::GetInstance()->getLogger(name)
-
-namespace ynwad {
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
-
 
 class Logger;
 
@@ -225,11 +211,7 @@ public:
     virtual ~LogAppender() {}
 
     virtual void log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) = 0;
-<<<<<<< HEAD
-    void setFormatter(LogFormatter::ptr val);
-=======
     void setFormatter(LogFormatter::ptr val) {m_formatter = val;}
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
     LogFormatter::ptr getFormatter() {return m_formatter;}
     LogLevel::Level getLevel() {return m_level;}
     void setLevel(LogLevel::Level level){m_level = level;}
@@ -356,11 +338,7 @@ private:
 };
 
 /// 日志器管理类单例模式
-<<<<<<< HEAD
 typedef sylar::Sigleton<LoggerManager> LoggerMgr;
-=======
-typedef ynwad::Singleton<LoggerManager> LoggerMgr;
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
 
 }
 

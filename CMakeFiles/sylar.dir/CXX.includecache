@@ -6,41 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/home/ynwad/projects/ynwad/ynwad/config.cc
-config.h
-/home/ynwad/projects/ynwad/ynwad/config.h
-
-/home/ynwad/projects/ynwad/ynwad/config.h
-memory
--
-string
--
-sstream
--
-boost/lexical_cast.hpp
--
+/home/ynwad/workspace/sylar/log.cc
 log.h
-/home/ynwad/projects/ynwad/ynwad/log.h
-utils.h
-/home/ynwad/projects/ynwad/ynwad/utils.h
-yaml-cpp/yaml.h
--
-vector
--
-list
--
+/home/ynwad/workspace/sylar/log.h
 map
--
-set
--
-unordered_map
--
-unordered_set
 -
 functional
 -
+memory
+-
+utils.h
+/home/ynwad/workspace/sylar/utils.h
+execinfo.h
+-
+sys/time.h
+-
+unistd.h
+-
+string.h
+-
+sys/stat.h
+-
+sys/types.h
+-
 
-/home/ynwad/projects/ynwad/ynwad/log.h
+/home/ynwad/workspace/sylar/log.h
 string
 -
 stdint.h
@@ -60,23 +50,23 @@ vector
 map
 -
 macro.h
-/home/ynwad/projects/ynwad/ynwad/macro.h
+/home/ynwad/workspace/sylar/macro.h
 mutex.h
-/home/ynwad/projects/ynwad/ynwad/mutex.h
+/home/ynwad/workspace/sylar/mutex.h
 sigleton.h
-/home/ynwad/projects/ynwad/ynwad/sigleton.h
+/home/ynwad/workspace/sylar/sigleton.h
 thread.h
-/home/ynwad/projects/ynwad/ynwad/thread.h
+/home/ynwad/workspace/sylar/thread.h
 
-/home/ynwad/projects/ynwad/ynwad/macro.h
+/home/ynwad/workspace/sylar/macro.h
 string.h
 -
 assert.h
 -
 log.h
-/home/ynwad/projects/ynwad/ynwad/log.h
+/home/ynwad/workspace/sylar/log.h
 
-/home/ynwad/projects/ynwad/ynwad/mutex.h
+/home/ynwad/workspace/sylar/mutex.h
 thread
 -
 functional
@@ -94,21 +84,21 @@ atomic
 list
 -
 noncopyable.h
-/home/ynwad/projects/ynwad/ynwad/noncopyable.h
+/home/ynwad/workspace/sylar/noncopyable.h
 
-/home/ynwad/projects/ynwad/ynwad/noncopyable.h
+/home/ynwad/workspace/sylar/noncopyable.h
 
-/home/ynwad/projects/ynwad/ynwad/sigleton.h
+/home/ynwad/workspace/sylar/sigleton.h
 memory
 -
 
-/home/ynwad/projects/ynwad/ynwad/thread.h
+/home/ynwad/workspace/sylar/thread.h
 mutex.h
-/home/ynwad/projects/ynwad/ynwad/mutex.h
+/home/ynwad/workspace/sylar/mutex.h
 string
 -
 
-/home/ynwad/projects/ynwad/ynwad/utils.h
+/home/ynwad/workspace/sylar/utils.h
 iostream
 -
 vector

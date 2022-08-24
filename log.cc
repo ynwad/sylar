@@ -10,11 +10,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
-<<<<<<< HEAD
 namespace sylar{
-=======
-namespace ynwad{
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
 
 std::string LogLevel::ToString(Level level){
     switch(level){
@@ -137,11 +133,7 @@ void Logger::setFormatter(LogFormatter::ptr val){
 }
 
 void Logger::setFormatter(const std::string& val){
-<<<<<<< HEAD
     sylar::LogFormatter::ptr new_val(new sylar::LogFormatter(val));
-=======
-    ynwad::LogFormatter::ptr new_val(new ynwad::LogFormatter(val));
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
     if(new_val->isError()){
         std::cout << "Logger setFormatter name=" << m_name
                   << " value=" << val << " invalid formattern"
@@ -152,23 +144,6 @@ void Logger::setFormatter(const std::string& val){
     setFormatter(new_val);
 }
 
-<<<<<<< HEAD
-void LogAppender::setFormatter(LogFormatter::ptr val)
-{
-    MutexType::Lock lock(m_mutex);
-    m_formatter = val;
-    if(m_formatter)
-    {
-        m_hasFormatter = true;
-    }
-    else
-    {
-        m_hasFormatter = false;
-    }
-}
-
-=======
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
 void StdOutLogAppender::log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event){
     if(level >= m_level){
         MutexType::Lock lock(m_mutex);
@@ -451,15 +426,10 @@ void LogFormatter::init() {
             }
         }
 
-<<<<<<< HEAD
         // std::cout << "(" << std::get<0>(i) << ") - (" << std::get<1>(i) << ") - (" << std::get<2>(i) << ")" << std::endl;
     }
     // std::cout << m_vecItems.size() << std::endl;
-=======
-        std::cout << "(" << std::get<0>(i) << ") - (" << std::get<1>(i) << ") - (" << std::get<2>(i) << ")" << std::endl;
-    }
-    std::cout << m_vecItems.size() << std::endl;
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
+    // std::cout << m_vecItems.size() << std::endl;
 }
 
 LoggerManager::LoggerManager() {

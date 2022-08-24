@@ -1,14 +1,17 @@
-<<<<<<< HEAD
+/*
+ * @Author: Ynwad_
+ * @Date: 2022-08-24 22:44:28
+ * @LastEditors: Ynwad_ qingchenchn@gmail.com
+ * @LastEditTime: 2022-08-24 23:02:35
+ * @FilePath: /sylar/noncopyable.h
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Ynwad_ qingchenchn@gmail.com, All Rights Reserved. 
+ */
 #ifndef __SYLAR_NONCOPYABLE_H__
 #define __SYLAR_NONCOPYABLE_H__
 
 namespace sylar{
-=======
-#ifndef __YNWAD_NONCOPYABLE_H__
-#define __YNWAD_NONCOPYABLE_H__
-
-namespace ynwad{
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
 class Noncopyable {
 public:
     /**
@@ -33,7 +36,4 @@ public:
 };
 
 }
-
-
-
 #endif

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -Dsylar_EXPORTS
 
-CXX_INCLUDES = -I/home/ynwad/projects/ynwad/ynwad/.
+CXX_INCLUDES = -I/home/ynwad/workspace/sylar/.
 
 CXX_FLAGS =  -pthread -rdynamic -O0 -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -fPIC
 

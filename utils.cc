@@ -3,32 +3,20 @@
 #include <iostream>
 #include <unistd.h>
 #include <sys/stat.h>
-<<<<<<< HEAD
 #include <sys/types.h>
 #include "log.h"
 
 namespace sylar{
 
 static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
-=======
-#include "log.h"
-
-namespace ynwad{
-
-static ynwad::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
 
 pid_t GetThreadId() {
     return syscall(SYS_gettid);
 }
 
 uint32_t GetFiberId() {
-<<<<<<< HEAD
     // return sylar::Fiber::GetFiberId();
     return 0;
-=======
-    return sylar::Fiber::GetFiberId();
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
 }
 
 static int __lstat(const char* file, struct stat* st = nullptr) {

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ynwad/projects/ynwad/ynwad/config.h
+/home/ynwad/workspace/sylar/config.h
 memory
 -
 string
@@ -16,9 +16,9 @@ sstream
 boost/lexical_cast.hpp
 -
 log.h
-/home/ynwad/projects/ynwad/ynwad/log.h
+/home/ynwad/workspace/sylar/log.h
 utils.h
-/home/ynwad/projects/ynwad/ynwad/utils.h
+/home/ynwad/workspace/sylar/utils.h
 yaml-cpp/yaml.h
 -
 vector
@@ -36,7 +36,7 @@ unordered_set
 functional
 -
 
-/home/ynwad/projects/ynwad/ynwad/log.h
+/home/ynwad/workspace/sylar/log.h
 string
 -
 stdint.h
@@ -56,23 +56,23 @@ vector
 map
 -
 macro.h
-/home/ynwad/projects/ynwad/ynwad/macro.h
+/home/ynwad/workspace/sylar/macro.h
 mutex.h
-/home/ynwad/projects/ynwad/ynwad/mutex.h
+/home/ynwad/workspace/sylar/mutex.h
 sigleton.h
-/home/ynwad/projects/ynwad/ynwad/sigleton.h
+/home/ynwad/workspace/sylar/sigleton.h
 thread.h
-/home/ynwad/projects/ynwad/ynwad/thread.h
+/home/ynwad/workspace/sylar/thread.h
 
-/home/ynwad/projects/ynwad/ynwad/macro.h
+/home/ynwad/workspace/sylar/macro.h
 string.h
 -
 assert.h
 -
 log.h
-/home/ynwad/projects/ynwad/ynwad/log.h
+/home/ynwad/workspace/sylar/log.h
 
-/home/ynwad/projects/ynwad/ynwad/mutex.h
+/home/ynwad/workspace/sylar/mutex.h
 thread
 -
 functional
@@ -90,31 +90,31 @@ atomic
 list
 -
 noncopyable.h
-/home/ynwad/projects/ynwad/ynwad/noncopyable.h
+/home/ynwad/workspace/sylar/noncopyable.h
 
-/home/ynwad/projects/ynwad/ynwad/noncopyable.h
+/home/ynwad/workspace/sylar/noncopyable.h
 
-/home/ynwad/projects/ynwad/ynwad/sigleton.h
+/home/ynwad/workspace/sylar/sigleton.h
 memory
 -
 
-/home/ynwad/projects/ynwad/ynwad/tests/test_config.cc
+/home/ynwad/workspace/sylar/tests/test_config.cc
 ../config.h
-/home/ynwad/projects/ynwad/ynwad/config.h
+/home/ynwad/workspace/sylar/config.h
 ../log.h
-/home/ynwad/projects/ynwad/ynwad/log.h
+/home/ynwad/workspace/sylar/log.h
 yaml-cpp/yaml.h
 -
 vector
 -
 
-/home/ynwad/projects/ynwad/ynwad/thread.h
+/home/ynwad/workspace/sylar/thread.h
 mutex.h
-/home/ynwad/projects/ynwad/ynwad/mutex.h
+/home/ynwad/workspace/sylar/mutex.h
 string
 -
 
-/home/ynwad/projects/ynwad/ynwad/utils.h
+/home/ynwad/workspace/sylar/utils.h
 iostream
 -
 vector

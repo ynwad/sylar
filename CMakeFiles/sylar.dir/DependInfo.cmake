@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ynwad/projects/ynwad/ynwad/config.cc" "/home/ynwad/projects/ynwad/ynwad/CMakeFiles/sylar.dir/config.cc.o"
-  "/home/ynwad/projects/ynwad/ynwad/log.cc" "/home/ynwad/projects/ynwad/ynwad/CMakeFiles/sylar.dir/log.cc.o"
-  "/home/ynwad/projects/ynwad/ynwad/mutex.cc" "/home/ynwad/projects/ynwad/ynwad/CMakeFiles/sylar.dir/mutex.cc.o"
-  "/home/ynwad/projects/ynwad/ynwad/thread.cc" "/home/ynwad/projects/ynwad/ynwad/CMakeFiles/sylar.dir/thread.cc.o"
-  "/home/ynwad/projects/ynwad/ynwad/utils.cc" "/home/ynwad/projects/ynwad/ynwad/CMakeFiles/sylar.dir/utils.cc.o"
+  "/home/ynwad/workspace/sylar/config.cc" "/home/ynwad/workspace/sylar/CMakeFiles/sylar.dir/config.cc.o"
+  "/home/ynwad/workspace/sylar/log.cc" "/home/ynwad/workspace/sylar/CMakeFiles/sylar.dir/log.cc.o"
+  "/home/ynwad/workspace/sylar/mutex.cc" "/home/ynwad/workspace/sylar/CMakeFiles/sylar.dir/mutex.cc.o"
+  "/home/ynwad/workspace/sylar/thread.cc" "/home/ynwad/workspace/sylar/CMakeFiles/sylar.dir/thread.cc.o"
+  "/home/ynwad/workspace/sylar/utils.cc" "/home/ynwad/workspace/sylar/CMakeFiles/sylar.dir/utils.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-/usr/bin/c++  -pthread -rdynamic -O0 -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -rdynamic CMakeFiles/test.dir/tests/test.cc.o -o bin/test   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib:/home/ynwad/projects/ynwad/ynwad/lib lib/libsylar.so 
-=======
-/usr/bin/c++   -pthread -rdynamic -O3 -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function  -rdynamic CMakeFiles/test.dir/tests/test.cc.o  -o bin/test -Wl,-rpath,/home/ynwad/workspace/ynwad/ynwad/lib lib/libynwad.so 
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
+/usr/bin/c++  -pthread -rdynamic -O0 -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -rdynamic CMakeFiles/test.dir/tests/test.cc.o -o bin/test   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib:/home/ynwad/workspace/sylar/lib lib/libsylar.so 

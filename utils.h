@@ -8,28 +8,19 @@
 >>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
  * @email qingchenchn@gmail.com
  * @date 2022-6-24
- */
+ **/
 
-<<<<<<< HEAD
 #ifndef __SYLAR_UTIL_H__
 #define __SYLAR_UTIL_H__
-=======
-#ifndef __YNWAD_UTIL_H__
-#define __YNWAD_UTIL_H__
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
 
 #include <iostream>
 #include <vector>
 #include <string>
 #include <iostream>
-<<<<<<< HEAD
 #include <sys/syscall.h>
 
 namespace sylar {
-=======
 
-namespace ynwad {
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
 /**
  * @brief 返回当前线程的ID
  */
@@ -61,8 +52,5 @@ public:
 };
 
 }
-
-
-
 
 #endif

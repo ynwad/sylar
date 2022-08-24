@@ -4,29 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-<<<<<<< HEAD
-  "/home/ynwad/projects/ynwad/ynwad/tests/test.cc" "/home/ynwad/projects/ynwad/ynwad/CMakeFiles/test.dir/tests/test.cc.o"
-=======
-  "/home/ynwad/workspace/ynwad/ynwad/tests/test.cc" "/home/ynwad/workspace/ynwad/ynwad/CMakeFiles/test.dir/tests/test.cc.o"
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
+  "/home/ynwad/workspace/sylar/tests/test.cc" "/home/ynwad/workspace/sylar/CMakeFiles/test.dir/tests/test.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-<<<<<<< HEAD
   "."
-=======
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-<<<<<<< HEAD
-  "/home/ynwad/projects/ynwad/ynwad/CMakeFiles/sylar.dir/DependInfo.cmake"
-=======
-  "/home/ynwad/workspace/ynwad/ynwad/CMakeFiles/ynwad.dir/DependInfo.cmake"
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
+  "/home/ynwad/workspace/sylar/CMakeFiles/sylar.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
