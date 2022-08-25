@@ -1,0 +1,2 @@
+2022-08-26 01:09:51	18214	UNKNOW	0	[FATAL]	[root]	/home/ynwad/workspace/sylar/tests/test.cc:36	222222222222222222222222222222  123456677
+2022-08-26 01:09:51	18214	UNKNOW	0	[ERROR]	[xxxx]	/home/ynwad/workspace/sylar/tests/test.cc:43	xx

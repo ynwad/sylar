@@ -1,15 +1,15 @@
 /*
  * @Author: error: git config user.name & please set dead value or install git
  * @Date: 2022-08-05 22:18:40
- * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
- * @LastEditTime: 2022-08-23 00:05:20
- * @FilePath: /ynwad/tests/test_config.cc
+ * @LastEditors: Ynwad_ qingchenchn@gmail.com
+ * @LastEditTime: 2022-08-26 01:08:35
+ * @FilePath: /sylar/tests/test_config.cc
  * @Description: 
  * 
  * Copyright (c) 2022 by error: git config user.name && git config user.email & please set dead value or install git, All Rights Reserved. 
  */
-#include "../config.h"
-#include "../log.h"
+#include "sylar/config.h"
+#include "sylar/log.h"
 #include <yaml-cpp/yaml.h>
 #include <vector>
 

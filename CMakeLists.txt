@@ -15,13 +15,13 @@ link_directories(/usr/local/lib)
 
 #设置变量
 set(LIB_SRC
-${PROJECT_SOURCE_DIR}/log.cc
-${PROJECT_SOURCE_DIR}/utils.cc
+${PROJECT_SOURCE_DIR}/sylar/log.cc
+${PROJECT_SOURCE_DIR}/sylar/utils.cc
 
-${PROJECT_SOURCE_DIR}/thread.cc
-${PROJECT_SOURCE_DIR}/utils.cc
-${PROJECT_SOURCE_DIR}/mutex.cc
-${PROJECT_SOURCE_DIR}/config.cc
+${PROJECT_SOURCE_DIR}/sylar/thread.cc
+${PROJECT_SOURCE_DIR}/sylar/utils.cc
+${PROJECT_SOURCE_DIR}/sylar/mutex.cc
+${PROJECT_SOURCE_DIR}/sylar/config.cc
 )
 
 #添加要生成的库文件

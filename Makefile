@@ -171,86 +171,140 @@ sylar/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/build
 .PHONY : sylar/fast
 
-config.o: config.cc.o
+sylar/config.o: sylar/config.cc.o
 
-.PHONY : config.o
-
-# target to build an object file
-config.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/config.cc.o
-.PHONY : config.cc.o
-
-config.i: config.cc.i
-
-.PHONY : config.i
-
-# target to preprocess a source file
-config.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/config.cc.i
-.PHONY : config.cc.i
-
-config.s: config.cc.s
-
-.PHONY : config.s
-
-# target to generate assembly for a file
-config.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/config.cc.s
-.PHONY : config.cc.s
-
-log.o: log.cc.o
-
-.PHONY : log.o
+.PHONY : sylar/config.o
 
 # target to build an object file
-log.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/log.cc.o
-.PHONY : log.cc.o
+sylar/config.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/config.cc.o
+.PHONY : sylar/config.cc.o
 
-log.i: log.cc.i
+sylar/config.i: sylar/config.cc.i
 
-.PHONY : log.i
+.PHONY : sylar/config.i
 
 # target to preprocess a source file
-log.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/log.cc.i
-.PHONY : log.cc.i
+sylar/config.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/config.cc.i
+.PHONY : sylar/config.cc.i
 
-log.s: log.cc.s
+sylar/config.s: sylar/config.cc.s
 
-.PHONY : log.s
+.PHONY : sylar/config.s
 
 # target to generate assembly for a file
-log.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/log.cc.s
-.PHONY : log.cc.s
+sylar/config.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/config.cc.s
+.PHONY : sylar/config.cc.s
 
-mutex.o: mutex.cc.o
+sylar/log.o: sylar/log.cc.o
 
-.PHONY : mutex.o
+.PHONY : sylar/log.o
 
 # target to build an object file
-mutex.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/mutex.cc.o
-.PHONY : mutex.cc.o
+sylar/log.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/log.cc.o
+.PHONY : sylar/log.cc.o
 
-mutex.i: mutex.cc.i
+sylar/log.i: sylar/log.cc.i
 
-.PHONY : mutex.i
+.PHONY : sylar/log.i
 
 # target to preprocess a source file
-mutex.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/mutex.cc.i
-.PHONY : mutex.cc.i
+sylar/log.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/log.cc.i
+.PHONY : sylar/log.cc.i
 
-mutex.s: mutex.cc.s
+sylar/log.s: sylar/log.cc.s
 
-.PHONY : mutex.s
+.PHONY : sylar/log.s
 
 # target to generate assembly for a file
-mutex.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/mutex.cc.s
-.PHONY : mutex.cc.s
+sylar/log.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/log.cc.s
+.PHONY : sylar/log.cc.s
+
+sylar/mutex.o: sylar/mutex.cc.o
+
+.PHONY : sylar/mutex.o
+
+# target to build an object file
+sylar/mutex.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/mutex.cc.o
+.PHONY : sylar/mutex.cc.o
+
+sylar/mutex.i: sylar/mutex.cc.i
+
+.PHONY : sylar/mutex.i
+
+# target to preprocess a source file
+sylar/mutex.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/mutex.cc.i
+.PHONY : sylar/mutex.cc.i
+
+sylar/mutex.s: sylar/mutex.cc.s
+
+.PHONY : sylar/mutex.s
+
+# target to generate assembly for a file
+sylar/mutex.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/mutex.cc.s
+.PHONY : sylar/mutex.cc.s
+
+sylar/thread.o: sylar/thread.cc.o
+
+.PHONY : sylar/thread.o
+
+# target to build an object file
+sylar/thread.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/thread.cc.o
+.PHONY : sylar/thread.cc.o
+
+sylar/thread.i: sylar/thread.cc.i
+
+.PHONY : sylar/thread.i
+
+# target to preprocess a source file
+sylar/thread.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/thread.cc.i
+.PHONY : sylar/thread.cc.i
+
+sylar/thread.s: sylar/thread.cc.s
+
+.PHONY : sylar/thread.s
+
+# target to generate assembly for a file
+sylar/thread.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/thread.cc.s
+.PHONY : sylar/thread.cc.s
+
+sylar/utils.o: sylar/utils.cc.o
+
+.PHONY : sylar/utils.o
+
+# target to build an object file
+sylar/utils.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/utils.cc.o
+.PHONY : sylar/utils.cc.o
+
+sylar/utils.i: sylar/utils.cc.i
+
+.PHONY : sylar/utils.i
+
+# target to preprocess a source file
+sylar/utils.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/utils.cc.i
+.PHONY : sylar/utils.cc.i
+
+sylar/utils.s: sylar/utils.cc.s
+
+.PHONY : sylar/utils.s
+
+# target to generate assembly for a file
+sylar/utils.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/utils.cc.s
+.PHONY : sylar/utils.cc.s
 
 tests/test.o: tests/test.cc.o
 
@@ -306,60 +360,6 @@ tests/test_config.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.s
 .PHONY : tests/test_config.cc.s
 
-thread.o: thread.cc.o
-
-.PHONY : thread.o
-
-# target to build an object file
-thread.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/thread.cc.o
-.PHONY : thread.cc.o
-
-thread.i: thread.cc.i
-
-.PHONY : thread.i
-
-# target to preprocess a source file
-thread.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/thread.cc.i
-.PHONY : thread.cc.i
-
-thread.s: thread.cc.s
-
-.PHONY : thread.s
-
-# target to generate assembly for a file
-thread.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/thread.cc.s
-.PHONY : thread.cc.s
-
-utils.o: utils.cc.o
-
-.PHONY : utils.o
-
-# target to build an object file
-utils.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/utils.cc.o
-.PHONY : utils.cc.o
-
-utils.i: utils.cc.i
-
-.PHONY : utils.i
-
-# target to preprocess a source file
-utils.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/utils.cc.i
-.PHONY : utils.cc.i
-
-utils.s: utils.cc.s
-
-.PHONY : utils.s
-
-# target to generate assembly for a file
-utils.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/utils.cc.s
-.PHONY : utils.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -371,27 +371,27 @@ help:
 	@echo "... sylar"
 	@echo "... test"
 	@echo "... test_config"
-	@echo "... config.o"
-	@echo "... config.i"
-	@echo "... config.s"
-	@echo "... log.o"
-	@echo "... log.i"
-	@echo "... log.s"
-	@echo "... mutex.o"
-	@echo "... mutex.i"
-	@echo "... mutex.s"
+	@echo "... sylar/config.o"
+	@echo "... sylar/config.i"
+	@echo "... sylar/config.s"
+	@echo "... sylar/log.o"
+	@echo "... sylar/log.i"
+	@echo "... sylar/log.s"
+	@echo "... sylar/mutex.o"
+	@echo "... sylar/mutex.i"
+	@echo "... sylar/mutex.s"
+	@echo "... sylar/thread.o"
+	@echo "... sylar/thread.i"
+	@echo "... sylar/thread.s"
+	@echo "... sylar/utils.o"
+	@echo "... sylar/utils.i"
+	@echo "... sylar/utils.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
-	@echo "... thread.o"
-	@echo "... thread.i"
-	@echo "... thread.s"
-	@echo "... utils.o"
-	@echo "... utils.i"
-	@echo "... utils.s"
 .PHONY : help
 
 

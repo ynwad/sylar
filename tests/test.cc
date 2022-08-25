@@ -2,14 +2,14 @@
  * @Author: Ynwad_
  * @Date: 2022-08-24 22:44:38
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-08-24 23:48:08
+ * @LastEditTime: 2022-08-26 01:09:30
  * @FilePath: /sylar/tests/test.cc
  * @Description: 
  * 
  * Copyright (c) 2022 by Ynwad_ qingchenchn@gmail.com, All Rights Reserved. 
  */
-#include "../log.h"
-#include "../utils.h"
+#include "sylar/log.h"
+#include "sylar/utils.h"
 
 using namespace sylar;
 
