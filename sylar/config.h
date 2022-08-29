@@ -1,3 +1,13 @@
+/*
+ * @Author: Ynwad_
+ * @Date: 2022-08-24 22:44:28
+ * @LastEditors: Ynwad_ qingchenchn@gmail.com
+ * @LastEditTime: 2022-08-30 00:11:58
+ * @FilePath: /sylar/sylar/config.h
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Ynwad_ qingchenchn@gmail.com, All Rights Reserved. 
+ */
 #ifndef __SYLAR_CONFIG_H__
 #define __SYLAR_CONFIG_H__
 
@@ -305,21 +315,49 @@ public:
             throw std::invalid_argument(name);
         }
         typename ConfigVar<T>::ptr v(new ConfigVar<T>(name, default_value, description));
-        s_datas[name] = v;
+        GetDatas()[name] = v;
         return v;
     }
 
     template<class T>
     static typename ConfigVar<T>::ptr Lookup(const std::string& name){
-        auto it = s_datas.find(name);
-        if(it == s_datas.end()){
+        auto it = GetDatas().find(name);
+        if(it == GetDatas().end()){
             return nullptr;
         }
         return std::dynamic_pointer_cast<ConfigVar<T>>(it->second);
     }
-// private:
-    static ConfigVarMap s_datas;
 
+    /**
+     * @description: 使用YANML::Node初始化配置模块
+     * @param {Node&} root
+     * @return {*}
+     */    
+    static void LoadFromYaml(const YAML::Node& root);
+
+    /**
+     * @description: 加载path文件夹里的配置文件
+     * @param {string&} path
+     * @param {bool} force
+     * @return {*}
+     */    
+    static void LoadFromConDir(const std::string& path, bool force = false);
+
+    /**
+     * @description: 查找并返回基类指针
+     * @param {string&} name
+     * @return {*}
+     */
+    static ConfigVarBase::ptr LookupBase(const std::string& name);
+// private:
+    /**
+     * @description: 
+     * @return {*}
+     */
+    static ConfigVarMap& GetDatas() {
+        static ConfigVarMap s_datas;
+        return s_datas;
+    }
 };
 
 }

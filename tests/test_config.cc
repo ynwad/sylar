@@ -2,7 +2,7 @@
  * @Author: error: git config user.name & please set dead value or install git
  * @Date: 2022-08-05 22:18:40
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-08-26 01:08:35
+ * @LastEditTime: 2022-08-30 00:25:58
  * @FilePath: /sylar/tests/test_config.cc
  * @Description: 
  * 
@@ -49,8 +49,10 @@ void print_yaml(const YAML::Node& node, int level){
 
 
 void test_yaml(){
-    YAML::Node root = YAML::LoadFile("/home/ynwad/projects/ynwad/ynwad/bin/conf/log.yaml");
-    print_yaml(root, 0);
+    YAML::Node root = YAML::LoadFile("/home/ynwad/workspace/sylar/bin/conf/test_config.yaml");
+    // YAML::Node root = YAML::LoadFile("/home/sylar/workspace/sylar/bin/conf/test.yml");
+    sylar::Config::LoadFromYaml(root);
+    // print_yaml(root, 0);
     // SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << root;
 }
 
@@ -112,7 +114,7 @@ int main(int args, char** argv){
     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << g_float_value_config->toString();
     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << g_vec_value_config->toString();
     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << g_person_map->toString();
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << sylar::Config::s_datas["class.person"]->toString();
+    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << sylar::Config::GetDatas()["class.person"]->toString();
     test_yaml();
 }
 
