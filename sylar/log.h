@@ -1,3 +1,13 @@
+/*
+ * @Author: Ynwad_
+ * @Date: 2022-08-24 22:44:28
+ * @LastEditors: Ynwad_ qingchenchn@gmail.com
+ * @LastEditTime: 2022-09-06 23:41:43
+ * @FilePath: /sylar/sylar/log.h
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Ynwad_ qingchenchn@gmail.com, All Rights Reserved. 
+ */
 
 #ifndef __SYLAR_LOG_H__
 #define __SYLAR_LOG_H__
@@ -50,8 +60,6 @@
  */
 #define SYLAR_LOG_FATAL(logger) SYLAR_LOG_LEVEL(logger, sylar::LogLevel::FATAL)
 
-
-#define SYLAR_LOG_ROOT() sylar::LoggerMgr::GetInstance()->getRoot()
 /**
  * @brief 使用格式化方式将日志级别level的日志写入到logger
  */
@@ -62,9 +70,13 @@
             sylar::GetFiberId(), time(0), sylar::Thread::GetName()))).getEvent->format(fmt, __VA_ARGS__)
 
 /**
+ * @description: 获取name的日志器
+ */
+#define SYLAR_LOG_ROOT() sylar::LoggerMgr::GetInstance()->getRoot()
+
+/**
  * @brief 获取name的日志器
  */
-
 #define SYLAR_LOG_NAME(name) sylar::LoggerMgr::GetInstance()->getLogger(name)
 
 namespace sylar {
@@ -75,6 +87,7 @@ class Logger;
 class LogLevel {
 public:
     enum Level {
+        UNKNOW = 0,
         DEBUG = 1,
         INFO = 2,
         WARN = 3,

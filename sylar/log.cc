@@ -9,6 +9,7 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include "config.h"
 
 namespace sylar{
 
@@ -56,9 +57,8 @@ LogEvent::LogEvent(std::shared_ptr<Logger> logger, LogLevel::Level level
 
 Logger::Logger(const std::string& name)
     :m_level(LogLevel::DEBUG)
-    ,m_name(name)
-    {
-        m_formatter.reset(new LogFormatter("%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"));
+    ,m_name(name){
+    m_formatter.reset(new LogFormatter("%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"));
 }
 
 void Logger::addAppender(LogAppender::ptr appender){
@@ -454,9 +454,45 @@ Logger::ptr LoggerManager::getLogger(const std::string& name) {
     return logger;
 }
 
-
 void LoggerManager::init() {
+
 }
+
+struct LogAppenderDefine{
+    int nType = 0; //1 File, 2 stdout
+    LogLevel::Level level = LogLevel::UNKNOW;
+    std::string formatter;
+    std::string file;
+
+    bool operator==(const LogAppenderDefine& oth) const{
+        return nType == oth.nType
+                && level == oth.level
+                && formatter == oth.formatter
+                && file == oth.file;
+    }
+};
+
+struct LogDefine{
+    std::string name;
+    LogLevel::Level level = LogLevel::UNKNOW;
+    std::string formatter;
+    std::set<LogAppenderDefine> vecAppender;
+
+    bool operator==(const LogDefine& oth) const{
+        return name == oth.name
+                && level == oth.level
+                && formatter == oth.formatter
+                && vecAppender == oth.vecAppender;
+    }
+
+    bool operator<(const LogDefine& oth) const {
+        return name < oth.name;
+    }
+};
+
+// sylar::ConfigVar<std::set<LogDefine>>::ptr g_log_defines = 
+//     sylar::Config::Lookup("logs", std::set<LogDefine>(), "logs config");
+
 
 
 }

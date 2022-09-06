@@ -11,6 +11,7 @@ CMakeFiles/sylar.dir/sylar/config.cc.o: sylar/sigleton.h
 CMakeFiles/sylar.dir/sylar/config.cc.o: sylar/thread.h
 CMakeFiles/sylar.dir/sylar/config.cc.o: sylar/utils.h
 
+CMakeFiles/sylar.dir/sylar/log.cc.o: sylar/config.h
 CMakeFiles/sylar.dir/sylar/log.cc.o: sylar/log.cc
 CMakeFiles/sylar.dir/sylar/log.cc.o: sylar/log.h
 CMakeFiles/sylar.dir/sylar/log.cc.o: sylar/macro.h
