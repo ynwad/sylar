@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-08-24 22:44:28
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-08-30 00:11:58
+ * @LastEditTime: 2022-09-07 23:45:00
  * @FilePath: /sylar/sylar/config.h
  * @Description: 
  * 
@@ -307,6 +307,7 @@ public:
         auto tmp = Lookup<T>(name);
         if(tmp){
             SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "Look name = " << name << " exists";
+            return tmp;
         }
 
         if(name.find_first_not_of("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz._0123456789")

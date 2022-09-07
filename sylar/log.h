@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-08-24 22:44:28
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-09-06 23:41:43
+ * @LastEditTime: 2022-09-08 00:35:55
  * @FilePath: /sylar/sylar/log.h
  * @Description: 
  * 
@@ -96,6 +96,12 @@ public:
     };
 
     static std::string ToString(Level level);
+
+    /**
+     * @brief 将文本转换成日志级别
+     * @param[in] str 日志级别文本
+     */
+    static LogLevel::Level FromString(const std::string& str);
 };
 
 //日志事件
