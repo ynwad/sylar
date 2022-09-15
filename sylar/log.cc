@@ -610,6 +610,54 @@ public:
 sylar::ConfigVar<std::set<LogDefine>>::ptr g_log_defines = 
     sylar::Config::Lookup("logs", std::set<LogDefine>(), "logs config");
 
+    std::string name;
+    LogLevel::Level level = LogLevel::UNKNOW;
+    std::string formatter;
+    std::vector<LogAppenderDefine> vecAppender;
+struct LogIniter {
+    LogIniter() {
+        g_log_defines->addListener([](const std::set<LogDefine> old_value, 
+                    const std::set<LogDefine> new_value){
+            for(auto &i : new_value){
+                auto ite = old_value.find(i);
+                sylar::Logger::ptr logger;
+                if(ite == old_value.end()){
+                    //新增logger
+                    logger.reset(new sylar::Logger(i.name));
+                }
+                logger->setLevel(i.level);
+                if(!i.formatter.empty())
+                {
+                    logger->setFormatter(i.formatter);
+                }
+                logger->clearAppender();
+                for(auto &appender : i.vecAppender){
+                    sylar::LogAppender::ptr ap;
+                    if(appender.nType == 1){
+                        ap.reset(new sylar::FileLogAppender(appender.file));
+                    }else if(appender.nType == 2){
+                        ap.reset(new sylar::StdOutLogAppender());
+                    }
+                    if(ap != nullptr){
+                        LogFormatter::ptr fmt(new LogFormatter(appender.formatter));
+                        ap->setLevel(appender.level);
+                        ap->setFormatter(fmt);
+                        logger->addAppender(ap);
+                    }
+                }
+            }
 
+            for(auto &i : old_value){
+                auto ite = new_value.find(i);
+                if(ite == new_value.end()){
+                    //删除Logger
+                    auto logger = SYLAR_LOG_NAME(i.name);
+                    logger->setLevel((LogLevel::Level)100);
+                    logger->clearAppender();
+                }
+            }
+        });
+    }
+};
 
 }
