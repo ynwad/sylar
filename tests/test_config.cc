@@ -2,7 +2,7 @@
  * @Author: error: git config user.name & please set dead value or install git
  * @Date: 2022-08-05 22:18:40
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-09-15 23:26:29
+ * @LastEditTime: 2022-09-21 02:10:03
  * @FilePath: /sylar/tests/test_config.cc
  * @Description: 
  * 
@@ -129,24 +129,41 @@ void printValue(int a, int b)
     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << a << " hhhhhh " << b ;
 }
 
+void test_log(){
+    static sylar::Logger::ptr system_log = SYLAR_LOG_NAME("system");
+    SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
+    std::cout << sylar::LoggerMgr::GetInstance()->toYamlString() << std::endl;
+    YAML::Node root = YAML::LoadFile("/home/ynwad/workspace/sylar/bin/conf/log.yaml");
+    sylar::Config::LoadFromYaml(root);
+    std::cout << "=============" << std::endl;
+    std::cout << sylar::LoggerMgr::GetInstance()->toYamlString() << std::endl;
+    std::cout << "=============" << std::endl;
+    std::cout << root << std::endl;
+    SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
+
+    system_log->setFormatter("%d - %m%n");
+    SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
+}
 
 
 std::function<void(int, int)> fuc = printValue;
 
 int main(int args, char** argv){
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << g_int_value_config->getValue();
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << g_float_value_config->toString();
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << g_vec_value_config->toString();
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << g_person_map->toString();
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << sylar::Config::GetDatas()["class.person"]->toString();
-    g_person->addListener([](const Person& old_value, const Person& new_value){
-        SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "old_value=" << old_value.toString()
-                << " new_value=" << new_value.toString();
-    });
-    g_int_value_config->addListener(fuc);
-    g_int_value_config->setValue(7777);
-    g_person->setValue(Person("eeeeeeeeeeeeeeee", 44, true));
+    // SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << g_int_value_config->getValue();
+    // SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << g_float_value_config->toString();
+    // SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << g_vec_value_config->toString();
+    // SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << g_person_map->toString();
+    // SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << sylar::Config::GetDatas()["class.person"]->toString();
+    // g_person->addListener([](const Person& old_value, const Person& new_value){
+    //     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "old_value=" << old_value.toString()
+    //             << " new_value=" << new_value.toString();
+    // });
+    // g_int_value_config->addListener(fuc);
+    // g_int_value_config->setValue(7777);
+    // g_person->setValue(Person("eeeeeeeeeeeeeeee", 44, true));
 
-    test_yaml();
+    // test_yaml();
+    test_log();
+    return 0;
 }
 

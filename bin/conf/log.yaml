@@ -2,7 +2,7 @@ logs:
   - name: root
     level: info
     formatter: "%d%T%m%n"
-    appender: 
+    appenders: 
         - type: FileLogAppender
           file: log.txt
         - type: StdOutAppender
@@ -10,7 +10,7 @@ logs:
   - name: system
     level: debug
     formatter: "%d%T%m%n"
-    appender:
+    appenders:
+        - type: StdOutAppender
         - type: FileLogAppender
           file: log.txt
-        - type: StdOutLogAppender

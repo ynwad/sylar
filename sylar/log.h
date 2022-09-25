@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-08-24 22:44:28
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-09-08 00:35:55
+ * @LastEditTime: 2022-09-25 23:05:46
  * @FilePath: /sylar/sylar/log.h
  * @Description: 
  * 
@@ -230,6 +230,7 @@ public:
     virtual ~LogAppender() {}
 
     virtual void log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) = 0;
+    virtual std::string toYamlString() = 0;
     void setFormatter(LogFormatter::ptr val) {m_formatter = val;}
     LogFormatter::ptr getFormatter() {return m_formatter;}
     LogLevel::Level getLevel() {return m_level;}
@@ -281,6 +282,11 @@ public:
      */
     LogFormatter::ptr getFormatter(){return m_formatter;}
 
+    /**
+     * @brief 将日志器的配置转成YAML String
+     */
+    std::string toYamlString();
+
 private:
     LogLevel::Level m_level;       //日志级别
     std::string m_name;     //日志名称
@@ -297,6 +303,7 @@ class StdOutLogAppender : public LogAppender {
 public:
     typedef std::shared_ptr<StdOutLogAppender> ptr;
     virtual void log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) override;
+    std::string toYamlString() override;
 };
 
 //输出到文件的Appender
@@ -305,7 +312,7 @@ public:
     typedef std::shared_ptr<FileLogAppender> ptr;
     FileLogAppender(const std::string filename);
     virtual void log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) override;
-
+    virtual std::string toYamlString() override;
     bool reopen();
 private:
     std::string m_filename;     //文件名
