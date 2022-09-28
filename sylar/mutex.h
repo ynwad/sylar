@@ -2,8 +2,8 @@
  * @Author: Ynwad_
  * @Date: 2022-08-24 22:44:28
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-08-24 23:15:01
- * @FilePath: /sylar/mutex.h
+ * @LastEditTime: 2022-09-26 23:41:46
+ * @FilePath: /sylar/sylar/mutex.h
  * @Description: 
  * 
  * Copyright (c) 2022 by Ynwad_ qingchenchn@gmail.com, All Rights Reserved. 
@@ -102,6 +102,46 @@ private:
     T& m_mutex;
     /// 是否已上锁
     bool m_locked;
+};
+
+/**
+ * @brief 互斥量
+ */
+class Mutex : Noncopyable {
+public: 
+    /// 局部锁
+    typedef ScopedLockImpl<Mutex> Lock;
+
+    /**
+     * @brief 构造函数
+     */
+    Mutex() {
+        pthread_mutex_init(&m_mutex, nullptr);
+    }
+
+    /**
+     * @brief 析构函数
+     */
+    ~Mutex() {
+        pthread_mutex_destroy(&m_mutex);
+    }
+
+    /**
+     * @brief 加锁
+     */
+    void lock() {
+        pthread_mutex_lock(&m_mutex);
+    }
+
+    /**
+     * @brief 解锁
+     */
+    void unlock() {
+        pthread_mutex_unlock(&m_mutex);
+    }
+private:
+    /// mutex
+    pthread_mutex_t m_mutex;
 };
 
 

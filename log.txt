@@ -20,3 +20,54 @@
 
 2022-09-25 22:57:42	32099	UNKNOW	0	[FATAL]	[root]	tests/test.cc:36	222222222222222222222222222222  123456677
 2022-09-25 22:57:42	32099	UNKNOW	0	[ERROR]	[xxxx]	tests/test.cc:43	xx
+2022-09-25 23:27:26 - hello system
+
+2022-09-27 01:02:54 - hello system
+
+2022-09-27 01:03:50 - hello system
+
+2022-09-27 01:12:12 - hello system
+
+2022-09-27 01:33:23 - hello system
+
+2022-09-27 01:35:56 - hello system
+
+2022-09-29 01:01:57	9328	name_0	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_0 this.name: name_0 id: 9328 this.id: 9328
+2022-09-29 01:01:57	9329	name_2	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_2 this.name: name_2 id: 9329 this.id: 9329
+2022-09-29 01:01:57	9330	name_4	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_4 this.name: name_4 id: 9330 this.id: 9330
+2022-09-29 01:01:57	9331	name_6	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_6 this.name: name_6 id: 9331 this.id: 9331
+2022-09-29 01:01:57	9332	name_8	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_8 this.name: name_8 id: 9332 this.id: 9332
+2022-09-29 01:01:57	9333	name_10	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_10 this.name: name_10 id: 9333 this.id: 9333
+2022-09-29 01:01:57	9334	name_12	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_12 this.name: name_12 id: 9334 this.id: 9334
+2022-09-29 01:01:57	9335	name_14	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_14 this.name: name_14 id: 9335 this.id: 9335
+2022-09-29 01:01:57	9336	name_16	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_16 this.name: name_16 id: 9336 this.id: 9336
+2022-09-29 01:01:57	9337	name_18	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_18 this.name: name_18 id: 9337 this.id: 9337
+2022-09-29 01:01:58	9327	UNKNOW	0	[INFO]	[system]	tests/test_thread.cc:59	thread test end
+2022-09-29 01:01:58	9327	UNKNOW	0	[INFO]	[system]	tests/test_thread.cc:60	count=1000000
+2022-09-29 01:01:58	9327	UNKNOW	0	[ERROR]	[system]	tests/test_thread.cc:62	thread test end()
+2022-09-29 01:05:20	10216	name_0	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_0 this.name: name_0 id: 10216 this.id: 10216
+2022-09-29 01:05:20	10217	name_2	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_2 this.name: name_2 id: 10217 this.id: 10217
+2022-09-29 01:05:20	10218	name_4	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_4 this.name: name_4 id: 10218 this.id: 10218
+2022-09-29 01:05:20	10220	name_8	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_8 this.name: name_8 id: 10220 this.id: 10220
+2022-09-29 01:05:20	10219	name_6	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_6 this.name: name_6 id: 10219 this.id: 10219
+2022-09-29 01:05:20	10221	name_10	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_10 this.name: name_10 id: 10221 this.id: 10221
+2022-09-29 01:05:20	10222	name_12	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_12 this.name: name_12 id: 10222 this.id: 10222
+2022-09-29 01:05:20	10223	name_14	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_14 this.name: name_14 id: 10223 this.id: 10223
+2022-09-29 01:05:20	10224	name_16	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_16 this.name: name_16 id: 10224 this.id: 10224
+2022-09-29 01:05:20	10225	name_18	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_18 this.name: name_18 id: 10225 this.id: 10225
+2022-09-29 01:05:21	10215	UNKNOW	0	[INFO]	[system]	tests/test_thread.cc:59	thread test end
+2022-09-29 01:05:21	10215	UNKNOW	0	[INFO]	[system]	tests/test_thread.cc:60	count=1000000
+2022-09-29 01:05:21	10215	UNKNOW	0	[ERROR]	[system]	tests/test_thread.cc:62	thread test end()
+2022-09-29 01:37:26	18452	name_0	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_0 this.name: name_0 id: 18452 this.id: 18452
+2022-09-29 01:37:26	18453	name_2	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_2 this.name: name_2 id: 18453 this.id: 18453
+2022-09-29 01:37:26	18454	name_4	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_4 this.name: name_4 id: 18454 this.id: 18454
+2022-09-29 01:37:26	18455	name_6	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_6 this.name: name_6 id: 18455 this.id: 18455
+2022-09-29 01:37:26	18456	name_8	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_8 this.name: name_8 id: 18456 this.id: 18456
+2022-09-29 01:37:26	18457	name_10	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_10 this.name: name_10 id: 18457 this.id: 18457
+2022-09-29 01:37:26	18458	name_12	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_12 this.name: name_12 id: 18458 this.id: 18458
+2022-09-29 01:37:26	18459	name_14	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_14 this.name: name_14 id: 18459 this.id: 18459
+2022-09-29 01:37:26	18460	name_16	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_16 this.name: name_16 id: 18460 this.id: 18460
+2022-09-29 01:37:26	18461	name_18	0	[INFO]	[system]	tests/test_thread.cc:20	name: name_18 this.name: name_18 id: 18461 this.id: 18461
+2022-09-29 01:37:26	18451	UNKNOW	0	[INFO]	[system]	tests/test_thread.cc:59	thread test end
+2022-09-29 01:37:26	18451	UNKNOW	0	[INFO]	[system]	tests/test_thread.cc:60	count=1000000
+2022-09-29 01:37:26	18451	UNKNOW	0	[ERROR]	[system]	tests/test_thread.cc:62	thread test end()

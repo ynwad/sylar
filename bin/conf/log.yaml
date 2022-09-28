@@ -1,16 +1,23 @@
 logs:
   - name: root
     level: info
-    formatter: "%d%T%m%n"
+    formatter: "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
     appenders: 
         - type: FileLogAppender
-          file: log.txt
+          file: /home/ynwad/workspace/sylar/log.txt
+          level: info
+          formatter: "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
         - type: StdOutAppender
+          level: info
+          formatter: "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
 
   - name: system
     level: debug
-    formatter: "%d%T%m%n"
+    formatter: "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
     appenders:
         - type: StdOutAppender
+          level: info
+          formatter: "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
         - type: FileLogAppender
-          file: log.txt
+          level: info
+          file: /home/ynwad/workspace/sylar/log.txt

@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/ynwad/workspace/sylar/sylar/config.cc
-config.h
-/home/ynwad/workspace/sylar/sylar/config.h
-log.h
-/home/ynwad/workspace/sylar/sylar/log.h
-list
--
-
 /home/ynwad/workspace/sylar/sylar/config.h
 memory
 -
@@ -106,10 +98,6 @@ assert.h
 log.h
 /home/ynwad/workspace/sylar/sylar/log.h
 
-/home/ynwad/workspace/sylar/sylar/mutex.cc
-mutex.h
-/home/ynwad/workspace/sylar/sylar/mutex.h
-
 /home/ynwad/workspace/sylar/sylar/mutex.h
 thread
 -
@@ -136,35 +124,11 @@ noncopyable.h
 memory
 -
 
-/home/ynwad/workspace/sylar/sylar/thread.cc
-thread.h
-/home/ynwad/workspace/sylar/sylar/thread.h
-log.h
-/home/ynwad/workspace/sylar/sylar/log.h
-utils.h
-/home/ynwad/workspace/sylar/sylar/utils.h
-
 /home/ynwad/workspace/sylar/sylar/thread.h
 mutex.h
 /home/ynwad/workspace/sylar/sylar/mutex.h
 string
 -
-
-/home/ynwad/workspace/sylar/sylar/utils.cc
-utils.h
-/home/ynwad/workspace/sylar/sylar/utils.h
-string.h
--
-iostream
--
-unistd.h
--
-sys/stat.h
--
-sys/types.h
--
-log.h
-/home/ynwad/workspace/sylar/sylar/log.h
 
 /home/ynwad/workspace/sylar/sylar/utils.h
 iostream

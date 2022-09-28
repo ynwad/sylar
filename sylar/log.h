@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-08-24 22:44:28
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-09-25 23:05:46
+ * @LastEditTime: 2022-09-29 01:15:50
  * @FilePath: /sylar/sylar/log.h
  * @Description: 
  * 
@@ -231,7 +231,7 @@ public:
 
     virtual void log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) = 0;
     virtual std::string toYamlString() = 0;
-    void setFormatter(LogFormatter::ptr val) {m_formatter = val;}
+    void setFormatter(LogFormatter::ptr val);
     LogFormatter::ptr getFormatter() {return m_formatter;}
     LogLevel::Level getLevel() {return m_level;}
     void setLevel(LogLevel::Level level){m_level = level;}

@@ -186,6 +186,17 @@ std::string Logger::toYamlString() {
 }
 
 
+void LogAppender::setFormatter(LogFormatter::ptr val){
+    m_formatter = val;
+
+    if(m_formatter){
+        m_hasFormatter = true;
+    }
+    else{
+        m_hasFormatter = false;
+    }
+}
+
 void StdOutLogAppender::log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event){
     if(level >= m_level){
         MutexType::Lock lock(m_mutex);
@@ -228,7 +239,7 @@ void FileLogAppender::log(std::shared_ptr<Logger> logger, LogLevel::Level level,
 
 std::string FileLogAppender::toYamlString(){
     YAML::Node node;
-    node["type"] = "StdoutLogAppender";
+    node["type"] = "FileLogAppender";
     node["file"] = m_filename;
     if(m_level != LogLevel::UNKNOW) {
         node["level"] = LogLevel::ToString(m_level);
@@ -659,6 +670,10 @@ public:
                               << std::endl;
                     continue;
                 }
+                if(a["level"].IsDefined()){
+                    lad.level = sylar::LogLevel::FromString(a["level"].as<std::string>());
+                }
+
                 ld.vecAppender.push_back(lad);
             }
         }
@@ -695,12 +710,21 @@ struct LogIniter {
                     }else if(appender.nType == 2){
                         ap.reset(new sylar::StdOutLogAppender());
                     }
-                    if(ap != nullptr){
+                    
+                    ap->setLevel(appender.level);
+                    
+                    if(!appender.formatter.empty()){
                         LogFormatter::ptr fmt(new LogFormatter(appender.formatter));
-                        ap->setLevel(appender.level);
                         ap->setFormatter(fmt);
-                        logger->addAppender(ap);
+                        if(!fmt->isError()) {
+                            ap->setFormatter(fmt);
+                        } else {
+                            std::cout << "log.name=" << i.name << " appender type=" << appender.nType
+                                    << " formatter=" << appender.formatter << " is invalid" << std::endl;
+                        }
                     }
+
+                    logger->addAppender(ap);
                 }
             }
 
