@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-09-26 22:37:29
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-09-29 00:59:41
+ * @LastEditTime: 2022-10-17 23:55:30
  * @FilePath: /sylar/tests/test_thread.cc
  * @Description: Thread Wrap
  * 
@@ -13,8 +13,8 @@
 
 sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 
-int count = 0;
-sylar::Mutex s_mutex;
+static int count = 0;
+sylar::RWMutex s_mutex;
 
 void fun1(){
     SYLAR_LOG_INFO(g_logger) << "name: " << sylar::Thread::GetName()
@@ -23,8 +23,8 @@ void fun1(){
                              << " this.id: " << sylar::Thread::GetThis()->getId();
 
     for(int i = 0; i < 100000; ++i) {
-        //sylar::RWMutex::WriteLock lock(s_mutex);
-        sylar::Mutex::Lock lock(s_mutex);
+        sylar::RWMutex::WriteLock lock(s_mutex);
+        // sylar::Mutex::Lock lock(s_mutex);
         ++count;
     }
 }

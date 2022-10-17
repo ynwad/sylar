@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-08-24 22:44:28
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-09-26 23:41:46
+ * @LastEditTime: 2022-10-17 23:43:57
  * @FilePath: /sylar/sylar/mutex.h
  * @Description: 
  * 
@@ -84,7 +84,7 @@ public:
     void lock() {
         if(!m_locked) {
             m_mutex.lock();
-            m_locked = true;
+            m_locked = true;  
         }
     }
 
@@ -183,6 +183,157 @@ private:
 };
 
 
-}
+/**
+ * @description: 局部读锁的模板实现
+ */
+template<class T>
+class ReadScopedLockImpl{
+public:
+    /**
+     * @description: 构造函数
+     * @param {T&} mutex 读写锁
+     */
+    ReadScopedLockImpl(T& mutex)
+        :m_mutex(mutex){
+        m_mutex.rdlock();
+        m_locked = true;
+    }
 
+    /**
+     * @description: 析构函数,自动释放锁
+     */
+    ~ReadScopedLockImpl() {
+        unlock();
+    }
+
+    /**
+     * @description: 上读锁
+     */
+    void lock() {
+        if(!m_locked) {
+            m_mutex.rdlock();
+            m_locked = true;
+        }
+    }
+
+    /**
+     * @description: 释放锁
+     */
+    void unlock() {
+        if(m_locked) {
+            m_mutex.unlock();
+            m_locked = false;
+        }
+    }
+
+private:
+    // 读锁
+    T& m_mutex;
+
+    // 判断是否上锁
+    bool m_locked;
+};
+
+/**
+ * @description: 局部写锁的模板实现
+ */
+template<class T>
+struct WriteScopedLockImpl {
+public:
+    /**
+     * @description: 构造函数
+     * @param {T&} mutex
+     */
+    WriteScopedLockImpl(T& mutex)
+        :m_mutex(mutex){
+        m_mutex.wrlock();
+        m_bLocked = true;
+    }
+
+    /**
+     * @description: 析构函数，释放锁
+     */
+    ~WriteScopedLockImpl(){
+        unlock();
+    }
+
+    /**
+     * @description: 上写锁
+     */
+    void lock(){
+        if(!m_bLocked){
+            m_mutex.wrlock();
+            m_bLocked = true;
+        }
+    }
+
+    /**
+     * @description: 释放写锁
+     */
+    void unlock(){
+        if(m_bLocked){
+            m_mutex.unlock();
+            m_bLocked = false;
+        }
+    }
+
+private:
+    // Mutex
+    T& m_mutex;
+    // 是否已上锁
+    bool m_bLocked;
+};
+
+/**
+ * @description: 读写互斥量，封装 pthread_rwlock_t
+ */
+class RWMutex : Noncopyable{
+public:
+    /// 局部读锁
+    typedef ReadScopedLockImpl<RWMutex> ReadLock;
+
+    /// 局部写锁
+    typedef WriteScopedLockImpl<RWMutex> WriteLock;
+
+    /**
+     * @description: 初始化
+     */
+    RWMutex(){
+        pthread_rwlock_init(&m_lock, nullptr);
+    }
+
+    /**
+     * @description: 析构函数，析构锁
+     */
+    ~RWMutex(){
+        pthread_rwlock_destroy(&m_lock);
+    }
+
+    /**
+     * @description: 上读锁
+     */
+    void rdlock(){
+        pthread_rwlock_rdlock(&m_lock);
+    }
+
+    /**
+     * @description: 上写锁
+     */
+    void wrlock(){
+        pthread_rwlock_wrlock(&m_lock);
+    }
+
+    /**
+     * @description: 解锁
+     */
+    void unlock(){
+        pthread_rwlock_unlock(&m_lock);
+    }
+
+private:
+    pthread_rwlock_t m_lock;
+};
+
+
+}
 #endif
