@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-08-24 22:44:28
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-10-17 23:43:57
+ * @LastEditTime: 2022-10-18 01:11:50
  * @FilePath: /sylar/sylar/mutex.h
  * @Description: 
  * 
@@ -334,6 +334,68 @@ private:
     pthread_rwlock_t m_lock;
 };
 
+/**
+ * @brief 空锁(用于调试)
+ */
+class NullMutex : Noncopyable{
+public:
+    /// 局部锁
+    typedef ScopedLockImpl<NullMutex> Lock;
+
+    /**
+     * @brief 构造函数
+     */
+    NullMutex() {}
+
+    /**
+     * @brief 析构函数
+     */
+    ~NullMutex() {}
+
+    /**
+     * @brief 加锁
+     */
+    void lock() {}
+
+    /**
+     * @brief 解锁
+     */
+    void unlock() {}
+};
+
+/**
+ * @brief 空读写锁(用于调试)
+ */
+class NullRWMutex : Noncopyable {
+public:
+    /// 局部读锁
+    typedef ReadScopedLockImpl<NullMutex> ReadLock;
+    /// 局部写锁
+    typedef WriteScopedLockImpl<NullMutex> WriteLock;
+
+    /**
+     * @brief 构造函数
+     */
+    NullRWMutex() {}
+    /**
+     * @brief 析构函数
+     */
+    ~NullRWMutex() {}
+
+    /**
+     * @brief 上读锁
+     */
+    void rdlock() {}
+
+    /**
+     * @brief 上写锁
+     */
+    void wrlock() {}
+    /**
+     * @brief 解锁
+     */
+    void unlock() {}
+};
 
 }
 #endif

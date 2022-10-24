@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-09-26 22:37:29
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-10-17 23:55:30
+ * @LastEditTime: 2022-10-19 00:46:51
  * @FilePath: /sylar/tests/test_thread.cc
  * @Description: Thread Wrap
  * 
@@ -35,6 +35,12 @@ void fun2() {
     }
 }
 
+void fun3() {
+    while(true) {
+        SYLAR_LOG_INFO(g_logger) << "========================================";
+    }
+}
+
 int main(int argc, char** argv){
     SYLAR_LOG_INFO(g_logger) << "thread test begin()";
     YAML::Node root = YAML::LoadFile("/home/ynwad/workspace/sylar/bin/conf/log.yaml");
@@ -45,10 +51,12 @@ int main(int argc, char** argv){
     // std::cout << sylar::LoggerMgr::GetInstance()->toYamlString() << std::endl;
 
     std::vector<sylar::Thread::ptr> thrs;
-    for(int i = 0; i < 10; ++i) {
-        sylar::Thread::ptr thr(new sylar::Thread(&fun1, "name_" + std::to_string(i * 2)));
+    for(int i = 0; i < 2; ++i) {
+        sylar::Thread::ptr thr(new sylar::Thread(&fun2, "name_" + std::to_string(i * 2)));
+        sylar::Thread::ptr thr2(new sylar::Thread(&fun3, "name_" + std::to_string(i * 2 + 1)));
         //sylar::Thread::ptr thr2(new sylar::Thread(&fun3, "name_" + std::to_string(i * 2 + 1)));
         thrs.push_back(thr);
+        thrs.push_back(thr2);
         //thrs.push_back(thr2);
     }
 
@@ -56,10 +64,10 @@ int main(int argc, char** argv){
         thrs[i]->join();
     }
 
-    SYLAR_LOG_INFO(g_logger) << "thread test end";
-    SYLAR_LOG_INFO(g_logger) << "count=" << count;
+    // SYLAR_LOG_INFO(g_logger) << "thread test end";
+    // SYLAR_LOG_INFO(g_logger) << "count=" << count;
 
-    SYLAR_LOG_ERROR(g_logger) << "thread test end()";
+    // SYLAR_LOG_ERROR(g_logger) << "thread test end()";
     std::cout << sylar::LoggerMgr::GetInstance()->toYamlString() << std::endl;
     std::cout << count << std::endl;
     return 0;

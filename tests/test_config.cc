@@ -2,7 +2,7 @@
  * @Author: error: git config user.name & please set dead value or install git
  * @Date: 2022-08-05 22:18:40
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-09-21 02:10:03
+ * @LastEditTime: 2022-10-20 02:25:44
  * @FilePath: /sylar/tests/test_config.cc
  * @Description: 
  * 
@@ -85,10 +85,10 @@ public:
     }
 };
 
-sylar::ConfigVar<Person>::ptr g_person =
-    sylar::Config::Lookup("class.person", Person(), "system person");
+// sylar::ConfigVar<Person>::ptr g_person =
+//     sylar::Config::Lookup("class.person", Person(), "system person");
 
-sylar::ConfigVar<std::map<std::string, Person> >::ptr g_person_map =
+sylar::ConfigVar<std::map<std::string, Person>>::ptr g_person_map =
     sylar::Config::Lookup("class.map", std::map<std::string, Person>(), "system person");
 
 sylar::ConfigVar<std::map<std::string, std::vector<Person> > >::ptr g_person_vec_map =
