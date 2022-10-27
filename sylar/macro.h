@@ -1,10 +1,12 @@
-/**
- * @file macro.h
- * @brief 常用宏的封装
- * @author sylar.yin
- * @email 564628276@qq.com
- * @date 2019-06-01
- * @copyright Copyright (c) 2019年 sylar.yin All rights reserved (www.sylar.top)
+/*
+ * @Author: Ynwad_
+ * @Date: 2022-08-24 22:44:28
+ * @LastEditors: Ynwad_ qingchenchn@gmail.com
+ * @LastEditTime: 2022-10-27 01:18:22
+ * @FilePath: /sylar/sylar/macro.h
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Ynwad_ qingchenchn@gmail.com, All Rights Reserved. 
  */
 #ifndef __SYLAR_MACRO_H__
 #define __SYLAR_MACRO_H__
@@ -12,7 +14,7 @@
 #include <string.h>
 #include <assert.h>
 #include "log.h"
-// #include "util.h"
+#include "utils.h"
 
 #if defined __GNUC__ || defined __llvm__
 /// LIKCLY 宏的封装, 告诉编译器优化,条件大概率成立

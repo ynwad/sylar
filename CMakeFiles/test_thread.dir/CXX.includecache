@@ -77,6 +77,8 @@ assert.h
 -
 log.h
 sylar/log.h
+utils.h
+sylar/utils.h
 
 sylar/mutex.h
 thread
@@ -111,6 +113,14 @@ config.h
 sylar/config.h
 mutex.h
 sylar/mutex.h
+macro.h
+sylar/macro.h
+utils.h
+sylar/utils.h
+thread.h
+sylar/thread.h
+sigleton.h
+sylar/sigleton.h
 
 sylar/thread.h
 mutex.h
@@ -119,6 +129,8 @@ string
 -
 
 sylar/utils.h
+cxxabi.h
+-
 iostream
 -
 vector

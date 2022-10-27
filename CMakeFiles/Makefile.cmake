@@ -120,5 +120,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_config.dir/DependInfo.cmake"
   "CMakeFiles/test_thread.dir/DependInfo.cmake"
   "CMakeFiles/test.dir/DependInfo.cmake"
+  "CMakeFiles/test_assert.dir/DependInfo.cmake"
   "CMakeFiles/sylar.dir/DependInfo.cmake"
   )

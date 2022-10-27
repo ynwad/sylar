@@ -1,9 +1,21 @@
+/*
+ * @Author: Ynwad_
+ * @Date: 2022-08-24 22:44:28
+ * @LastEditors: Ynwad_ qingchenchn@gmail.com
+ * @LastEditTime: 2022-10-28 00:36:33
+ * @FilePath: /sylar/sylar/utils.cc
+ * @Description: 常用的一些函数
+ * 
+ * Copyright (c) 2022 by Ynwad_ qingchenchn@gmail.com, All Rights Reserved. 
+ */
+
 #include "utils.h"
 #include <string.h>
 #include <iostream>
 #include <unistd.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <execinfo.h>
 #include "log.h"
 
 namespace sylar{
@@ -17,6 +29,59 @@ pid_t GetThreadId() {
 uint32_t GetFiberId() {
     // return sylar::Fiber::GetFiberId();
     return 0;
+}
+
+/**
+ * @description: 用于将backtrace_symbols函数所返回的字符串解析成对应的函数名，便于理解
+ * @param {char*} str
+ * @return {*}
+ */
+static std::string demangle(const char* str){
+    size_t size = 0;
+    int status = 0;
+    std::string rt;
+    rt.resize(256);
+    if(1 == sscanf(str, "%*[^(]%*[^_]%255[^)+]", &rt[0])){
+        char* v = abi::__cxa_demangle(&rt[0], nullptr, &size, &status);
+        if(v){
+            std::string result(v);
+            free(v);
+            return result;
+        }
+    }
+    if(1 == sscanf(str, "%255s", &rt[0])){
+        return rt;
+    }
+    return str;
+}
+
+void BackTrace(std::vector<std::string>& bt, int size, int nskip){
+    void** array = (void**)malloc((sizeof(void*) * size));
+    size_t s = ::backtrace(array, size);
+
+    char** strings = backtrace_symbols(array, s);
+    if(strings == nullptr){
+        SYLAR_LOG_ERROR(g_logger) << "backtrace_symbols error";
+        return;
+    }
+
+    for(size_t i = nskip; i < s; ++i){
+        bt.emplace_back(demangle(strings[i]));
+        // bt.emplace_back(strings[i]);
+    }
+
+    free(strings);
+    free(array);
+}
+
+std::string BackTraceToString(int size, int skip, const std::string& prefix){
+    std::vector<std::string> bt;
+    BackTrace(bt, size, skip);
+    std::stringstream ss;
+    for(size_t i = 0; i < bt.size(); ++i){
+        ss << prefix << bt[i] << std::endl;
+    }
+    return ss.str();
 }
 
 static int __lstat(const char* file, struct stat* st = nullptr) {
@@ -87,4 +152,6 @@ std::string FSUtil::Dirname(const std::string& filename){
         return filename.substr(0, pos);
     }
 }
+
+
 }

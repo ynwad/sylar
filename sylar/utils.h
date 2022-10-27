@@ -1,18 +1,17 @@
-/**
- * @file util.h
- * @brief 常用的工具函数
-<<<<<<< HEAD
- * @author sylar.yin
-=======
- * @author ynwad.yin
->>>>>>> b996627ff76fe6b1dcb3115480d7245e7a1d779c
- * @email qingchenchn@gmail.com
- * @date 2022-6-24
- **/
-
+/*
+ * @Author: Ynwad_
+ * @Date: 2022-08-24 23:05:37
+ * @LastEditors: Ynwad_ qingchenchn@gmail.com
+ * @LastEditTime: 2022-10-27 01:20:21
+ * @FilePath: /sylar/sylar/utils.h
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Ynwad_ qingchenchn@gmail.com, All Rights Reserved. 
+ */
 #ifndef __SYLAR_UTIL_H__
 #define __SYLAR_UTIL_H__
 
+#include <cxxabi.h>
 #include <iostream>
 #include <vector>
 #include <string>
@@ -30,6 +29,24 @@ pid_t GetThreadId();
  * @brief 返回当前协程的ID
  */
 uint32_t GetFiberId();
+
+/**
+ * @description: 获取当前调用栈信息
+ * @param {std::vector<std::string>&} bt 保存调用栈 
+ * @param {int} size 最多返回的层数
+ * @param {int} nskip  跳过栈顶的层数
+ * @return {*} void
+ */
+void BackTrace(std::vector<std::string>& bt, int size = 64, int nskip = 1);
+
+/**
+ * @description: 
+ * @param {int} size    最多返回的层数
+ * @param {int} skip    跳过栈顶的层数
+ * @param {string&} prefix
+ * @return {std::string} 返回转化为字符串的堆栈信息
+ */
+std::string BackTraceToString(int size = 64, int skip = 2, const std::string& prefix = "");
 
 class FSUtil {
 public:
@@ -50,6 +67,7 @@ public:
     static bool OpenForWrite(std::ofstream& ofs, const std::string& filename
                     ,std::ios_base::openmode mode);
 };
+
 
 }
 

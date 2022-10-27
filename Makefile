@@ -172,6 +172,19 @@ test/fast:
 .PHONY : test/fast
 
 #=============================================================================
+# Target rules for targets named test_assert
+
+# Build rule for target.
+test_assert: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_assert
+.PHONY : test_assert
+
+# fast build rule for target.
+test_assert/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_assert.dir/build.make CMakeFiles/test_assert.dir/build
+.PHONY : test_assert/fast
+
+#=============================================================================
 # Target rules for targets named sylar
 
 # Build rule for target.
@@ -346,6 +359,33 @@ tests/test.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cc.s
 .PHONY : tests/test.cc.s
 
+tests/test_assert.o: tests/test_assert.cc.o
+
+.PHONY : tests/test_assert.o
+
+# target to build an object file
+tests/test_assert.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_assert.dir/build.make CMakeFiles/test_assert.dir/tests/test_assert.cc.o
+.PHONY : tests/test_assert.cc.o
+
+tests/test_assert.i: tests/test_assert.cc.i
+
+.PHONY : tests/test_assert.i
+
+# target to preprocess a source file
+tests/test_assert.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_assert.dir/build.make CMakeFiles/test_assert.dir/tests/test_assert.cc.i
+.PHONY : tests/test_assert.cc.i
+
+tests/test_assert.s: tests/test_assert.cc.s
+
+.PHONY : tests/test_assert.s
+
+# target to generate assembly for a file
+tests/test_assert.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_assert.dir/build.make CMakeFiles/test_assert.dir/tests/test_assert.cc.s
+.PHONY : tests/test_assert.cc.s
+
 tests/test_config.o: tests/test_config.cc.o
 
 .PHONY : tests/test_config.o
@@ -410,6 +450,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... sylar"
 	@echo "... test"
+	@echo "... test_assert"
 	@echo "... test_config"
 	@echo "... test_thread"
 	@echo "... sylar/config.o"
@@ -430,6 +471,9 @@ help:
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
+	@echo "... tests/test_assert.o"
+	@echo "... tests/test_assert.i"
+	@echo "... tests/test_assert.s"
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"

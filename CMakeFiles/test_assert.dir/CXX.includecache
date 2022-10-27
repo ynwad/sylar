@@ -6,15 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/ynwad/workspace/sylar/tests/test_config.cc
-sylar/config.h
-/home/ynwad/workspace/sylar/tests/sylar/config.h
-sylar/log.h
-/home/ynwad/workspace/sylar/tests/sylar/log.h
-yaml-cpp/yaml.h
--
-vector
--
+/home/ynwad/workspace/sylar/tests/test_assert.cc
+sylar/sylar.h
+/home/ynwad/workspace/sylar/tests/sylar/sylar.h
 
 sylar/config.h
 memory
@@ -109,6 +103,22 @@ sylar/noncopyable.h
 sylar/sigleton.h
 memory
 -
+
+sylar/sylar.h
+log.h
+sylar/log.h
+config.h
+sylar/config.h
+mutex.h
+sylar/mutex.h
+macro.h
+sylar/macro.h
+utils.h
+sylar/utils.h
+thread.h
+sylar/thread.h
+sigleton.h
+sylar/sigleton.h
 
 sylar/thread.h
 mutex.h

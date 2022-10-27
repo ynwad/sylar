@@ -50,5 +50,10 @@ add_dependencies(test_thread sylar)
 force_redefine_file_macro_for_sources(test_thread)
 target_link_libraries(test_thread sylar yaml-cpp)
 
+add_executable(test_assert tests/test_assert.cc)
+add_dependencies(test_assert sylar)
+force_redefine_file_macro_for_sources(test_assert)
+target_link_libraries(test_assert sylar yaml-cpp)
+
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

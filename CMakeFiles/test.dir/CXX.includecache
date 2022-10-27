@@ -47,6 +47,8 @@ assert.h
 -
 log.h
 sylar/log.h
+utils.h
+sylar/utils.h
 
 sylar/mutex.h
 thread
@@ -81,6 +83,8 @@ string
 -
 
 sylar/utils.h
+cxxabi.h
+-
 iostream
 -
 vector

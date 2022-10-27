@@ -3,4 +3,5 @@
 /home/ynwad/workspace/sylar/CMakeFiles/edit_cache.dir
 /home/ynwad/workspace/sylar/CMakeFiles/test_thread.dir
 /home/ynwad/workspace/sylar/CMakeFiles/test.dir
+/home/ynwad/workspace/sylar/CMakeFiles/test_assert.dir
 /home/ynwad/workspace/sylar/CMakeFiles/sylar.dir
