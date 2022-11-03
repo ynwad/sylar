@@ -18,3 +18,5 @@ CXX_FLAGS =  -pthread -rdynamic -O0 -g -std=c++11 -Wall -Wno-deprecated -Werror 
 
 # Custom defines: CMakeFiles/sylar.dir/sylar/config.cc.o_DEFINES = __FILE__="sylar/config.cc"
 
+# Custom defines: CMakeFiles/sylar.dir/sylar/fiber.cc.o_DEFINES = __FILE__="sylar/fiber.cc"
+

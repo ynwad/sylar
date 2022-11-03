@@ -11,6 +11,17 @@ CMakeFiles/sylar.dir/sylar/config.cc.o
  /home/ynwad/workspace/sylar/sylar/sigleton.h
  /home/ynwad/workspace/sylar/sylar/thread.h
  /home/ynwad/workspace/sylar/sylar/utils.h
+CMakeFiles/sylar.dir/sylar/fiber.cc.o
+ /home/ynwad/workspace/sylar/sylar/config.h
+ /home/ynwad/workspace/sylar/sylar/fiber.cc
+ /home/ynwad/workspace/sylar/sylar/fiber.h
+ /home/ynwad/workspace/sylar/sylar/log.h
+ /home/ynwad/workspace/sylar/sylar/macro.h
+ /home/ynwad/workspace/sylar/sylar/mutex.h
+ /home/ynwad/workspace/sylar/sylar/noncopyable.h
+ /home/ynwad/workspace/sylar/sylar/sigleton.h
+ /home/ynwad/workspace/sylar/sylar/thread.h
+ /home/ynwad/workspace/sylar/sylar/utils.h
 CMakeFiles/sylar.dir/sylar/log.cc.o
  /home/ynwad/workspace/sylar/sylar/config.h
  /home/ynwad/workspace/sylar/sylar/log.cc
@@ -35,6 +46,7 @@ CMakeFiles/sylar.dir/sylar/thread.cc.o
  /home/ynwad/workspace/sylar/sylar/thread.h
  /home/ynwad/workspace/sylar/sylar/utils.h
 CMakeFiles/sylar.dir/sylar/utils.cc.o
+ /home/ynwad/workspace/sylar/sylar/fiber.h
  /home/ynwad/workspace/sylar/sylar/log.h
  /home/ynwad/workspace/sylar/sylar/macro.h
  /home/ynwad/workspace/sylar/sylar/mutex.h

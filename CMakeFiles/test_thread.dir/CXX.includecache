@@ -42,6 +42,16 @@ unordered_set
 functional
 -
 
+sylar/fiber.h
+memory
+-
+functional
+-
+ucontext.h
+-
+thread.h
+sylar/thread.h
+
 sylar/log.h
 string
 -
@@ -121,6 +131,8 @@ thread.h
 sylar/thread.h
 sigleton.h
 sylar/sigleton.h
+fiber.h
+sylar/fiber.h
 
 sylar/thread.h
 mutex.h

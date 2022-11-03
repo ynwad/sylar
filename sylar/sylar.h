@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-09-26 23:28:28
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-10-27 01:15:52
+ * @LastEditTime: 2022-11-02 00:24:05
  * @FilePath: /sylar/sylar/sylar.h
  * @Description: sylar 头文件集合
  * 
@@ -18,5 +18,6 @@
 #include "utils.h"
 #include "thread.h"
 #include "sigleton.h"
+#include "fiber.h"
 
 #endif

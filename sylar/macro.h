@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-08-24 22:44:28
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-10-27 01:18:22
+ * @LastEditTime: 2022-11-02 00:12:06
  * @FilePath: /sylar/sylar/macro.h
  * @Description: 
  * 
@@ -31,7 +31,7 @@
     if(SYLAR_UNLIKELY(!(x))) { \
         SYLAR_LOG_ERROR(SYLAR_LOG_ROOT()) << "ASSERTION: " #x \
             << "\nbacktrace:\n" \
-            << sylar::BacktraceToString(100, 2, "    "); \
+            << sylar::BackTraceToString(100, 2, "    "); \
         assert(x); \
     }
 
@@ -41,7 +41,7 @@
         SYLAR_LOG_ERROR(SYLAR_LOG_ROOT()) << "ASSERTION: " #x \
             << "\n" << w \
             << "\nbacktrace:\n" \
-            << sylar::BacktraceToString(100, 2, "    "); \
+            << sylar::BackTraceToString(100, 2, "    "); \
         assert(x); \
     }
 

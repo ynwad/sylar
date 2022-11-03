@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-08-24 23:05:37
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-10-27 01:20:21
+ * @LastEditTime: 2022-11-02 00:46:47
  * @FilePath: /sylar/sylar/utils.h
  * @Description: 
  * 
@@ -28,7 +28,7 @@ pid_t GetThreadId();
 /**
  * @brief 返回当前协程的ID
  */
-uint32_t GetFiberId();
+uint64_t GetFiberId();
 
 /**
  * @description: 获取当前调用栈信息

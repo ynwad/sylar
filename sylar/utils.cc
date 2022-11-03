@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-08-24 22:44:28
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-10-28 00:36:33
+ * @LastEditTime: 2022-11-02 00:46:38
  * @FilePath: /sylar/sylar/utils.cc
  * @Description: 常用的一些函数
  * 
@@ -17,6 +17,7 @@
 #include <sys/types.h>
 #include <execinfo.h>
 #include "log.h"
+#include "fiber.h"
 
 namespace sylar{
 
@@ -26,9 +27,8 @@ pid_t GetThreadId() {
     return syscall(SYS_gettid);
 }
 
-uint32_t GetFiberId() {
-    // return sylar::Fiber::GetFiberId();
-    return 0;
+uint64_t GetFiberId() {
+    return sylar::Fiber::GetFiberId();
 }
 
 /**
