@@ -112,6 +112,20 @@ sylar/noncopyable.h
 
 sylar/noncopyable.h
 
+sylar/scheduler.h
+memory
+-
+vector
+-
+list
+-
+iostream
+-
+fiber.h
+sylar/fiber.h
+thread.h
+sylar/thread.h
+
 sylar/sigleton.h
 memory
 -
@@ -133,6 +147,8 @@ sigleton.h
 sylar/sigleton.h
 fiber.h
 sylar/fiber.h
+scheduler.h
+sylar/scheduler.h
 
 sylar/thread.h
 mutex.h

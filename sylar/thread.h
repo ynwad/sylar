@@ -1,21 +1,14 @@
 /*
- * @Author: error: git config user.name & please set dead value or install git
- * @Date: 2022-08-03 00:51:01
- * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
- * @LastEditTime: 2022-08-03 00:52:45
- * @FilePath: /ynwad/thread.h
+ * @Author: Ynwad_
+ * @Date: 2022-08-24 22:44:28
+ * @LastEditors: Ynwad_ qingchenchn@gmail.com
+ * @LastEditTime: 2022-11-17 23:05:55
+ * @FilePath: /sylar/sylar/thread.h
  * @Description: 
  * 
- * Copyright (c) 2022 by error: git config user.name && git config user.email & please set dead value or install git, All Rights Reserved. 
+ * Copyright (c) 2022 by Ynwad_ qingchenchn@gmail.com, All Rights Reserved. 
  */
-/**
- * @file thread.h
- * @brief 线程相关的封装
- * @author sylar.yin
- * @email 564628276@qq.com
- * @date 2019-05-31
- * @copyright Copyright (c) 2019年 sylar.yin All rights reserved (www.sylar.top)
- */
+
 #ifndef __SYLAR_THREAD_H__
 #define __SYLAR_THREAD_H__
 

@@ -8,6 +8,7 @@ CMakeFiles/test_assert.dir/tests/test_assert.cc.o: sylar/log.h
 CMakeFiles/test_assert.dir/tests/test_assert.cc.o: sylar/macro.h
 CMakeFiles/test_assert.dir/tests/test_assert.cc.o: sylar/mutex.h
 CMakeFiles/test_assert.dir/tests/test_assert.cc.o: sylar/noncopyable.h
+CMakeFiles/test_assert.dir/tests/test_assert.cc.o: sylar/scheduler.h
 CMakeFiles/test_assert.dir/tests/test_assert.cc.o: sylar/sigleton.h
 CMakeFiles/test_assert.dir/tests/test_assert.cc.o: sylar/sylar.h
 CMakeFiles/test_assert.dir/tests/test_assert.cc.o: sylar/thread.h

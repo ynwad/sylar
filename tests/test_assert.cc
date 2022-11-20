@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-10-27 01:14:24
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-10-27 01:27:04
+ * @LastEditTime: 2022-11-04 01:33:04
  * @FilePath: /sylar/tests/test_assert.cc
  * @Description: 
  * 
@@ -18,7 +18,6 @@ void test_assert(){
 }
 
 int main(int argc, char** argv){
-    
     test_assert();
     return 0;
 }

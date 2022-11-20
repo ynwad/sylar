@@ -1,3 +1,13 @@
+/*
+ * @Author: Ynwad_
+ * @Date: 2022-08-24 22:44:28
+ * @LastEditors: Ynwad_ qingchenchn@gmail.com
+ * @LastEditTime: 2022-11-17 23:24:25
+ * @FilePath: /sylar/sylar/thread.cc
+ * @Descri
+ * 
+ * Copyright (c) 2022 by Ynwad_ qingchenchn@gmail.com, All Rights Reserved. 
+ */
 #include "thread.h"
 #include "log.h"
 #include "utils.h"
@@ -39,6 +49,7 @@ Thread::Thread(std::function<void()> cb, const std::string& name)
             << " name=" << name;
         throw std::logic_error("pthread_create error");
     }
+    // 保证 在离开构造函数之前，线程已经跑起来了
     m_semaphore.wait();
 }
 

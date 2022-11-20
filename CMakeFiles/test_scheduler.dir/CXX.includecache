@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ynwad/workspace/sylar/tests/test_fiber.cc
+/home/ynwad/workspace/sylar/tests/test_scheduler.cc
 sylar/sylar.h
 /home/ynwad/workspace/sylar/tests/sylar/sylar.h
 

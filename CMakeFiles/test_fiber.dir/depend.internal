@@ -9,6 +9,7 @@ CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o
  sylar/macro.h
  sylar/mutex.h
  sylar/noncopyable.h
+ sylar/scheduler.h
  sylar/sigleton.h
  sylar/sylar.h
  sylar/thread.h
