@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-08-24 22:44:28
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-11-02 00:46:38
+ * @LastEditTime: 2022-11-23 01:05:52
  * @FilePath: /sylar/sylar/utils.cc
  * @Description: 常用的一些函数
  * 
@@ -15,6 +15,7 @@
 #include <unistd.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <sys/time.h>
 #include <execinfo.h>
 #include "log.h"
 #include "fiber.h"
@@ -82,6 +83,19 @@ std::string BackTraceToString(int size, int skip, const std::string& prefix){
         ss << prefix << bt[i] << std::endl;
     }
     return ss.str();
+}
+
+
+uint64_t GetCurrentMS(){
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    return tv.tv_sec * 1000ul  + tv.tv_usec / 1000;
+}
+
+uint64_t GetCurrentUS(){
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    return tv.tv_sec * 1000 * 1000ul  + tv.tv_usec;
 }
 
 static int __lstat(const char* file, struct stat* st = nullptr) {

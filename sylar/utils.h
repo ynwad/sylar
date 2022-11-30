@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-08-24 23:05:37
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-11-02 00:46:47
+ * @LastEditTime: 2022-11-23 00:43:41
  * @FilePath: /sylar/sylar/utils.h
  * @Description: 
  * 
@@ -47,6 +47,16 @@ void BackTrace(std::vector<std::string>& bt, int size = 64, int nskip = 1);
  * @return {std::string} 返回转化为字符串的堆栈信息
  */
 std::string BackTraceToString(int size = 64, int skip = 2, const std::string& prefix = "");
+
+/**
+ * @brief 获取当前时间的毫秒
+ */
+uint64_t GetCurrentMS();
+
+/**
+ * @brief 获取当前时间的微秒
+ */
+uint64_t GetCurrentUS();
 
 class FSUtil {
 public:

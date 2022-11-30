@@ -26,6 +26,8 @@ ${PROJECT_SOURCE_DIR}/sylar/mutex.cc
 ${PROJECT_SOURCE_DIR}/sylar/config.cc
 ${PROJECT_SOURCE_DIR}/sylar/fiber.cc
 ${PROJECT_SOURCE_DIR}/sylar/scheduler.cc
+${PROJECT_SOURCE_DIR}/sylar/IOManager.cc
+${PROJECT_SOURCE_DIR}/sylar/timer.cc
 )
 
 #添加要生成的库文件
@@ -66,6 +68,11 @@ add_executable(test_scheduler tests/test_scheduler.cc)
 add_dependencies(test_scheduler sylar)
 force_redefine_file_macro_for_sources(test_scheduler)
 target_link_libraries(test_scheduler sylar yaml-cpp)
+
+add_executable(test_iomanager tests/test_IOManager.cc)
+add_dependencies(test_iomanager sylar)
+force_redefine_file_macro_for_sources(test_iomanager)
+target_link_libraries(test_iomanager sylar yaml-cpp)
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

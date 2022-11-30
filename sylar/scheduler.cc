@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-11-15 23:28:57
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-11-18 01:31:16
+ * @LastEditTime: 2022-11-29 00:54:25
  * @FilePath: /sylar/sylar/scheduler.cc
  * @Description: 
  * 
@@ -60,7 +60,7 @@ Fiber* Scheduler::GetMainFiber() {
     return t_scheduler_fiber;
 }
 
-void Scheduler::start() {
+void Scheduler:: start() {
     MutexType::Lock lock(m_mutex);
     if(!m_stopping) {
         return;

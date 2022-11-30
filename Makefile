@@ -133,6 +133,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_iomanager
+
+# Build rule for target.
+test_iomanager: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_iomanager
+.PHONY : test_iomanager
+
+# fast build rule for target.
+test_iomanager/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
+.PHONY : test_iomanager/fast
+
+#=============================================================================
 # Target rules for targets named test_scheduler
 
 # Build rule for target.
@@ -222,6 +235,33 @@ sylar: cmake_check_build_system
 sylar/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/build
 .PHONY : sylar/fast
+
+sylar/IOManager.o: sylar/IOManager.cc.o
+
+.PHONY : sylar/IOManager.o
+
+# target to build an object file
+sylar/IOManager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/IOManager.cc.o
+.PHONY : sylar/IOManager.cc.o
+
+sylar/IOManager.i: sylar/IOManager.cc.i
+
+.PHONY : sylar/IOManager.i
+
+# target to preprocess a source file
+sylar/IOManager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/IOManager.cc.i
+.PHONY : sylar/IOManager.cc.i
+
+sylar/IOManager.s: sylar/IOManager.cc.s
+
+.PHONY : sylar/IOManager.s
+
+# target to generate assembly for a file
+sylar/IOManager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/IOManager.cc.s
+.PHONY : sylar/IOManager.cc.s
 
 sylar/config.o: sylar/config.cc.o
 
@@ -385,6 +425,33 @@ sylar/thread.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/thread.cc.s
 .PHONY : sylar/thread.cc.s
 
+sylar/timer.o: sylar/timer.cc.o
+
+.PHONY : sylar/timer.o
+
+# target to build an object file
+sylar/timer.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/timer.cc.o
+.PHONY : sylar/timer.cc.o
+
+sylar/timer.i: sylar/timer.cc.i
+
+.PHONY : sylar/timer.i
+
+# target to preprocess a source file
+sylar/timer.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/timer.cc.i
+.PHONY : sylar/timer.cc.i
+
+sylar/timer.s: sylar/timer.cc.s
+
+.PHONY : sylar/timer.s
+
+# target to generate assembly for a file
+sylar/timer.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/timer.cc.s
+.PHONY : sylar/timer.cc.s
+
 sylar/utils.o: sylar/utils.cc.o
 
 .PHONY : sylar/utils.o
@@ -438,6 +505,33 @@ tests/test.s: tests/test.cc.s
 tests/test.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cc.s
 .PHONY : tests/test.cc.s
+
+tests/test_IOManager.o: tests/test_IOManager.cc.o
+
+.PHONY : tests/test_IOManager.o
+
+# target to build an object file
+tests/test_IOManager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_IOManager.cc.o
+.PHONY : tests/test_IOManager.cc.o
+
+tests/test_IOManager.i: tests/test_IOManager.cc.i
+
+.PHONY : tests/test_IOManager.i
+
+# target to preprocess a source file
+tests/test_IOManager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_IOManager.cc.i
+.PHONY : tests/test_IOManager.cc.i
+
+tests/test_IOManager.s: tests/test_IOManager.cc.s
+
+.PHONY : tests/test_IOManager.s
+
+# target to generate assembly for a file
+tests/test_IOManager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_IOManager.cc.s
+.PHONY : tests/test_IOManager.cc.s
 
 tests/test_assert.o: tests/test_assert.cc.o
 
@@ -587,8 +681,12 @@ help:
 	@echo "... test_assert"
 	@echo "... test_config"
 	@echo "... test_fiber"
+	@echo "... test_iomanager"
 	@echo "... test_scheduler"
 	@echo "... test_thread"
+	@echo "... sylar/IOManager.o"
+	@echo "... sylar/IOManager.i"
+	@echo "... sylar/IOManager.s"
 	@echo "... sylar/config.o"
 	@echo "... sylar/config.i"
 	@echo "... sylar/config.s"
@@ -607,12 +705,18 @@ help:
 	@echo "... sylar/thread.o"
 	@echo "... sylar/thread.i"
 	@echo "... sylar/thread.s"
+	@echo "... sylar/timer.o"
+	@echo "... sylar/timer.i"
+	@echo "... sylar/timer.s"
 	@echo "... sylar/utils.o"
 	@echo "... sylar/utils.i"
 	@echo "... sylar/utils.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
+	@echo "... tests/test_IOManager.o"
+	@echo "... tests/test_IOManager.i"
+	@echo "... tests/test_IOManager.s"
 	@echo "... tests/test_assert.o"
 	@echo "... tests/test_assert.i"
 	@echo "... tests/test_assert.s"
