@@ -71,12 +71,14 @@ vector
 -
 map
 -
+stdarg.h
+-
 macro.h
 sylar/macro.h
 mutex.h
 sylar/mutex.h
-sigleton.h
-sylar/sigleton.h
+singleton.h
+sylar/singleton.h
 thread.h
 sylar/thread.h
 
@@ -126,7 +128,7 @@ sylar/fiber.h
 thread.h
 sylar/thread.h
 
-sylar/sigleton.h
+sylar/singleton.h
 memory
 -
 
@@ -143,8 +145,8 @@ utils.h
 sylar/utils.h
 thread.h
 sylar/thread.h
-sigleton.h
-sylar/sigleton.h
+singleton.h
+sylar/singleton.h
 fiber.h
 sylar/fiber.h
 scheduler.h

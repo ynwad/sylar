@@ -10,7 +10,7 @@ CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o
  sylar/mutex.h
  sylar/noncopyable.h
  sylar/scheduler.h
- sylar/sigleton.h
+ sylar/singleton.h
  sylar/sylar.h
  sylar/thread.h
  sylar/utils.h

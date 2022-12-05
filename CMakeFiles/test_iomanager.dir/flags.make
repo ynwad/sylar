@@ -8,5 +8,5 @@ CXX_INCLUDES = -I/home/ynwad/workspace/sylar/.
 
 CXX_FLAGS =  -pthread -rdynamic -O0 -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined
 
-# Custom defines: CMakeFiles/test_iomanager.dir/tests/test_IOManager.cc.o_DEFINES = __FILE__="tests/test_IOManager.cc"
+# Custom defines: CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o_DEFINES = __FILE__="tests/test_iomanager.cc"
 

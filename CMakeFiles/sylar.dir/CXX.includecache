@@ -6,30 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/ynwad/workspace/sylar/sylar/IOManager.cc
-IOManager.h
-/home/ynwad/workspace/sylar/sylar/IOManager.h
-macro.h
-/home/ynwad/workspace/sylar/sylar/macro.h
-log.h
-/home/ynwad/workspace/sylar/sylar/log.h
-errno.h
--
-fcntl.h
--
-sys/epoll.h
--
-string.h
--
-unistd.h
--
-
-/home/ynwad/workspace/sylar/sylar/IOManager.h
-scheduler.h
-/home/ynwad/workspace/sylar/sylar/scheduler.h
-timer.h
-/home/ynwad/workspace/sylar/sylar/timer.h
-
 /home/ynwad/workspace/sylar/sylar/fiber.h
 memory
 -
@@ -59,12 +35,14 @@ vector
 -
 map
 -
+stdarg.h
+-
 macro.h
 /home/ynwad/workspace/sylar/sylar/macro.h
 mutex.h
 /home/ynwad/workspace/sylar/sylar/mutex.h
-sigleton.h
-/home/ynwad/workspace/sylar/sylar/sigleton.h
+singleton.h
+/home/ynwad/workspace/sylar/sylar/singleton.h
 thread.h
 /home/ynwad/workspace/sylar/sylar/thread.h
 
@@ -100,21 +78,7 @@ noncopyable.h
 
 /home/ynwad/workspace/sylar/sylar/noncopyable.h
 
-/home/ynwad/workspace/sylar/sylar/scheduler.h
-memory
--
-vector
--
-list
--
-iostream
--
-fiber.h
-/home/ynwad/workspace/sylar/sylar/fiber.h
-thread.h
-/home/ynwad/workspace/sylar/sylar/thread.h
-
-/home/ynwad/workspace/sylar/sylar/sigleton.h
+/home/ynwad/workspace/sylar/sylar/singleton.h
 memory
 -
 
@@ -124,15 +88,27 @@ mutex.h
 string
 -
 
-/home/ynwad/workspace/sylar/sylar/timer.h
-memory
+/home/ynwad/workspace/sylar/sylar/utils.cc
+utils.h
+/home/ynwad/workspace/sylar/sylar/utils.h
+string.h
 -
-vector
+iostream
 -
-set
+unistd.h
 -
-thread.h
-/home/ynwad/workspace/sylar/sylar/thread.h
+sys/stat.h
+-
+sys/types.h
+-
+sys/time.h
+-
+execinfo.h
+-
+log.h
+/home/ynwad/workspace/sylar/sylar/log.h
+fiber.h
+/home/ynwad/workspace/sylar/sylar/fiber.h
 
 /home/ynwad/workspace/sylar/sylar/utils.h
 cxxabi.h

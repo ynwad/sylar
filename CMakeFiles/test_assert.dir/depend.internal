@@ -10,7 +10,7 @@ CMakeFiles/test_assert.dir/tests/test_assert.cc.o
  sylar/mutex.h
  sylar/noncopyable.h
  sylar/scheduler.h
- sylar/sigleton.h
+ sylar/singleton.h
  sylar/sylar.h
  sylar/thread.h
  sylar/utils.h

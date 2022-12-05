@@ -15,64 +15,62 @@ include_directories(/usr/local/include)
 
 link_directories(/usr/local/lib)
 
+find_package(OpenSSL REQUIRED)
+if(OPENSSL_FOUND)
+    include_directories(${OPENSSL_INCLUDE_DIR})
+endif()
+
 #设置变量
 set(LIB_SRC
-${PROJECT_SOURCE_DIR}/sylar/log.cc
-${PROJECT_SOURCE_DIR}/sylar/utils.cc
+    sylar/log.cc
+    sylar/utils.cc
 
-${PROJECT_SOURCE_DIR}/sylar/thread.cc
-${PROJECT_SOURCE_DIR}/sylar/utils.cc
-${PROJECT_SOURCE_DIR}/sylar/mutex.cc
-${PROJECT_SOURCE_DIR}/sylar/config.cc
-${PROJECT_SOURCE_DIR}/sylar/fiber.cc
-${PROJECT_SOURCE_DIR}/sylar/scheduler.cc
-${PROJECT_SOURCE_DIR}/sylar/IOManager.cc
-${PROJECT_SOURCE_DIR}/sylar/timer.cc
+    sylar/thread.cc
+    sylar/utils.cc
+    sylar/mutex.cc
+    sylar/config.cc
+    sylar/fiber.cc
+    sylar/scheduler.cc
+    sylar/iomanager.cc
+    sylar/timer.cc
+    sylar/hook.cc
+    sylar/address.cc
+    sylar/fd_manager.cc
+    sylar/socket.cc
 )
 
 #添加要生成的库文件
 add_library(sylar SHARED ${LIB_SRC})
 force_redefine_file_macro_for_sources(sylar)
 
-# set_target_properties(sylar PROPERTIES OUTPUT_NAME "sylar")
-# add_library(sylar_static STATIC $(LIB_SRC))
-# SET_TARGET_PROPERTIES (sylar_static PROPERTIES OUTPUT_NAME "sylar")
+find_library(PTHREAD pthread)
 
-add_executable(test tests/test.cc)
-add_dependencies(test sylar)
-force_redefine_file_macro_for_sources(test)
-target_link_libraries(test sylar yaml-cpp)
+set(LIBS
+        sylar
+        dl
+        pthread
+        yaml-cpp
+        # jsoncpp
+        # ${ZLIB_LIBRARIES}
+        ${OPENSSL_LIBRARIES}
+        # ${PROTOBUF_LIBRARIES}
+        # event
+        # hiredis_vip
+        # mysqlclient_r
+        # zookeeper_mt
+        # sqlite3
+        # tinyxml2
+        # jemalloc
+        )
 
-add_executable(test_config tests/test_config.cc)
-add_dependencies(test_config sylar)
-force_redefine_file_macro_for_sources(test_config)
-target_link_libraries(test_config sylar yaml-cpp)
-
-
-add_executable(test_thread tests/test_thread.cc)
-add_dependencies(test_thread sylar)
-force_redefine_file_macro_for_sources(test_thread)
-target_link_libraries(test_thread sylar yaml-cpp)
-
-add_executable(test_assert tests/test_assert.cc)
-add_dependencies(test_assert sylar)
-force_redefine_file_macro_for_sources(test_assert)
-target_link_libraries(test_assert sylar yaml-cpp)
-
-add_executable(test_fiber tests/test_fiber.cc)
-add_dependencies(test_fiber sylar)
-force_redefine_file_macro_for_sources(test_fiber)
-target_link_libraries(test_fiber sylar yaml-cpp)
-
-add_executable(test_scheduler tests/test_scheduler.cc)
-add_dependencies(test_scheduler sylar)
-force_redefine_file_macro_for_sources(test_scheduler)
-target_link_libraries(test_scheduler sylar yaml-cpp)
-
-add_executable(test_iomanager tests/test_IOManager.cc)
-add_dependencies(test_iomanager sylar)
-force_redefine_file_macro_for_sources(test_iomanager)
-target_link_libraries(test_iomanager sylar yaml-cpp)
+sylar_add_executable(test_config "tests/test_config.cc" sylar "${LIBS}")
+sylar_add_executable(test_thread "tests/test_thread.cc" sylar "${LIBS}")
+sylar_add_executable(test_fiber "tests/test_fiber.cc" sylar "${LIBS}")
+sylar_add_executable(test_scheduler "tests/test_scheduler.cc" sylar "${LIBS}")
+sylar_add_executable(test_iomanager "tests/test_iomanager.cc" sylar "${LIBS}")
+sylar_add_executable(test_hook "tests/test_hook.cc" sylar "${LIBS}")
+sylar_add_executable(test_address "tests/test_address.cc" sylar "${LIBS}")
+sylar_add_executable(test_socket "tests/test_socket.cc" sylar "${LIBS}")
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

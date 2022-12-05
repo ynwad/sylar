@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-08-24 22:44:28
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-11-23 01:05:52
+ * @LastEditTime: 2022-12-05 23:07:50
  * @FilePath: /sylar/sylar/utils.cc
  * @Description: 常用的一些函数
  * 
@@ -167,5 +167,12 @@ std::string FSUtil::Dirname(const std::string& filename){
     }
 }
 
+
+bool FSUtil::Unlink(const std::string& filename, bool exist) {
+    if(!exist && __lstat(filename.c_str())) {
+        return true;
+    }
+    return ::unlink(filename.c_str()) == 0;
+}
 
 }

@@ -2,7 +2,7 @@
  * @Author: Ynwad_
  * @Date: 2022-08-24 22:44:28
  * @LastEditors: Ynwad_ qingchenchn@gmail.com
- * @LastEditTime: 2022-09-29 01:15:50
+ * @LastEditTime: 2022-12-05 21:23:05
  * @FilePath: /sylar/sylar/log.h
  * @Description: 
  * 
@@ -21,9 +21,10 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <stdarg.h>
 #include "macro.h"
 #include "mutex.h"
-#include "sigleton.h"
+#include "singleton.h"
 #include "thread.h"
 
 /**
@@ -364,7 +365,7 @@ private:
 };
 
 /// 日志器管理类单例模式
-typedef sylar::Sigleton<LoggerManager> LoggerMgr;
+typedef sylar::singleton<LoggerManager> LoggerMgr;
 
 }
 

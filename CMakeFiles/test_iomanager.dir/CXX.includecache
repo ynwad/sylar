@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/ynwad/workspace/sylar/tests/test_IOManager.cc
+/home/ynwad/workspace/sylar/tests/test_iomanager.cc
 sylar/sylar.h
 /home/ynwad/workspace/sylar/tests/sylar/sylar.h
-sylar/IOManager.h
-/home/ynwad/workspace/sylar/tests/sylar/IOManager.h
+sylar/iomanager.h
+/home/ynwad/workspace/sylar/tests/sylar/iomanager.h
 sys/types.h
 -
 sys/socket.h
@@ -25,12 +25,6 @@ iostream
 -
 sys/epoll.h
 -
-
-sylar/IOManager.h
-scheduler.h
-sylar/scheduler.h
-timer.h
-sylar/timer.h
 
 sylar/config.h
 memory
@@ -72,6 +66,12 @@ ucontext.h
 thread.h
 sylar/thread.h
 
+sylar/iomanager.h
+scheduler.h
+sylar/scheduler.h
+timer.h
+sylar/timer.h
+
 sylar/log.h
 string
 -
@@ -91,12 +91,14 @@ vector
 -
 map
 -
+stdarg.h
+-
 macro.h
 sylar/macro.h
 mutex.h
 sylar/mutex.h
-sigleton.h
-sylar/sigleton.h
+singleton.h
+sylar/singleton.h
 thread.h
 sylar/thread.h
 
@@ -146,7 +148,7 @@ sylar/fiber.h
 thread.h
 sylar/thread.h
 
-sylar/sigleton.h
+sylar/singleton.h
 memory
 -
 
@@ -163,8 +165,8 @@ utils.h
 sylar/utils.h
 thread.h
 sylar/thread.h
-sigleton.h
-sylar/sigleton.h
+singleton.h
+sylar/singleton.h
 fiber.h
 sylar/fiber.h
 scheduler.h

@@ -22,7 +22,15 @@ CXX_FLAGS =  -pthread -rdynamic -O0 -g -std=c++11 -Wall -Wno-deprecated -Werror 
 
 # Custom defines: CMakeFiles/sylar.dir/sylar/scheduler.cc.o_DEFINES = __FILE__="sylar/scheduler.cc"
 
-# Custom defines: CMakeFiles/sylar.dir/sylar/IOManager.cc.o_DEFINES = __FILE__="sylar/IOManager.cc"
+# Custom defines: CMakeFiles/sylar.dir/sylar/iomanager.cc.o_DEFINES = __FILE__="sylar/iomanager.cc"
 
 # Custom defines: CMakeFiles/sylar.dir/sylar/timer.cc.o_DEFINES = __FILE__="sylar/timer.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/hook.cc.o_DEFINES = __FILE__="sylar/hook.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/address.cc.o_DEFINES = __FILE__="sylar/address.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/fd_manager.cc.o_DEFINES = __FILE__="sylar/fd_manager.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/socket.cc.o_DEFINES = __FILE__="sylar/socket.cc"
 

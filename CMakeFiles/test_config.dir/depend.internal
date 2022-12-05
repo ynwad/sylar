@@ -8,6 +8,6 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o
  sylar/macro.h
  sylar/mutex.h
  sylar/noncopyable.h
- sylar/sigleton.h
+ sylar/singleton.h
  sylar/thread.h
  sylar/utils.h

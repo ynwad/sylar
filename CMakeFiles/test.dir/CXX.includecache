@@ -35,8 +35,8 @@ macro.h
 sylar/macro.h
 mutex.h
 sylar/mutex.h
-sigleton.h
-sylar/sigleton.h
+singleton.h
+sylar/singleton.h
 thread.h
 sylar/thread.h
 
@@ -72,7 +72,7 @@ sylar/noncopyable.h
 
 sylar/noncopyable.h
 
-sylar/sigleton.h
+sylar/singleton.h
 memory
 -
 

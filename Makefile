@@ -133,6 +133,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_socket
+
+# Build rule for target.
+test_socket: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_socket
+.PHONY : test_socket
+
+# fast build rule for target.
+test_socket/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
+.PHONY : test_socket/fast
+
+#=============================================================================
 # Target rules for targets named test_iomanager
 
 # Build rule for target.
@@ -159,6 +172,19 @@ test_scheduler/fast:
 .PHONY : test_scheduler/fast
 
 #=============================================================================
+# Target rules for targets named test_address
+
+# Build rule for target.
+test_address: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_address
+.PHONY : test_address
+
+# fast build rule for target.
+test_address/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/build
+.PHONY : test_address/fast
+
+#=============================================================================
 # Target rules for targets named test_fiber
 
 # Build rule for target.
@@ -170,19 +196,6 @@ test_fiber: cmake_check_build_system
 test_fiber/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
 .PHONY : test_fiber/fast
-
-#=============================================================================
-# Target rules for targets named test_config
-
-# Build rule for target.
-test_config: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_config
-.PHONY : test_config
-
-# fast build rule for target.
-test_config/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
-.PHONY : test_config/fast
 
 #=============================================================================
 # Target rules for targets named test_thread
@@ -198,30 +211,30 @@ test_thread/fast:
 .PHONY : test_thread/fast
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named test_config
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
-.PHONY : test
+test_config: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_config
+.PHONY : test_config
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+test_config/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
+.PHONY : test_config/fast
 
 #=============================================================================
-# Target rules for targets named test_assert
+# Target rules for targets named test_hook
 
 # Build rule for target.
-test_assert: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_assert
-.PHONY : test_assert
+test_hook: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_hook
+.PHONY : test_hook
 
 # fast build rule for target.
-test_assert/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_assert.dir/build.make CMakeFiles/test_assert.dir/build
-.PHONY : test_assert/fast
+test_hook/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
+.PHONY : test_hook/fast
 
 #=============================================================================
 # Target rules for targets named sylar
@@ -236,32 +249,32 @@ sylar/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/build
 .PHONY : sylar/fast
 
-sylar/IOManager.o: sylar/IOManager.cc.o
+sylar/address.o: sylar/address.cc.o
 
-.PHONY : sylar/IOManager.o
+.PHONY : sylar/address.o
 
 # target to build an object file
-sylar/IOManager.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/IOManager.cc.o
-.PHONY : sylar/IOManager.cc.o
+sylar/address.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/address.cc.o
+.PHONY : sylar/address.cc.o
 
-sylar/IOManager.i: sylar/IOManager.cc.i
+sylar/address.i: sylar/address.cc.i
 
-.PHONY : sylar/IOManager.i
+.PHONY : sylar/address.i
 
 # target to preprocess a source file
-sylar/IOManager.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/IOManager.cc.i
-.PHONY : sylar/IOManager.cc.i
+sylar/address.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/address.cc.i
+.PHONY : sylar/address.cc.i
 
-sylar/IOManager.s: sylar/IOManager.cc.s
+sylar/address.s: sylar/address.cc.s
 
-.PHONY : sylar/IOManager.s
+.PHONY : sylar/address.s
 
 # target to generate assembly for a file
-sylar/IOManager.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/IOManager.cc.s
-.PHONY : sylar/IOManager.cc.s
+sylar/address.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/address.cc.s
+.PHONY : sylar/address.cc.s
 
 sylar/config.o: sylar/config.cc.o
 
@@ -290,6 +303,33 @@ sylar/config.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/config.cc.s
 .PHONY : sylar/config.cc.s
 
+sylar/fd_manager.o: sylar/fd_manager.cc.o
+
+.PHONY : sylar/fd_manager.o
+
+# target to build an object file
+sylar/fd_manager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/fd_manager.cc.o
+.PHONY : sylar/fd_manager.cc.o
+
+sylar/fd_manager.i: sylar/fd_manager.cc.i
+
+.PHONY : sylar/fd_manager.i
+
+# target to preprocess a source file
+sylar/fd_manager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/fd_manager.cc.i
+.PHONY : sylar/fd_manager.cc.i
+
+sylar/fd_manager.s: sylar/fd_manager.cc.s
+
+.PHONY : sylar/fd_manager.s
+
+# target to generate assembly for a file
+sylar/fd_manager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/fd_manager.cc.s
+.PHONY : sylar/fd_manager.cc.s
+
 sylar/fiber.o: sylar/fiber.cc.o
 
 .PHONY : sylar/fiber.o
@@ -316,6 +356,60 @@ sylar/fiber.s: sylar/fiber.cc.s
 sylar/fiber.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/fiber.cc.s
 .PHONY : sylar/fiber.cc.s
+
+sylar/hook.o: sylar/hook.cc.o
+
+.PHONY : sylar/hook.o
+
+# target to build an object file
+sylar/hook.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/hook.cc.o
+.PHONY : sylar/hook.cc.o
+
+sylar/hook.i: sylar/hook.cc.i
+
+.PHONY : sylar/hook.i
+
+# target to preprocess a source file
+sylar/hook.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/hook.cc.i
+.PHONY : sylar/hook.cc.i
+
+sylar/hook.s: sylar/hook.cc.s
+
+.PHONY : sylar/hook.s
+
+# target to generate assembly for a file
+sylar/hook.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/hook.cc.s
+.PHONY : sylar/hook.cc.s
+
+sylar/iomanager.o: sylar/iomanager.cc.o
+
+.PHONY : sylar/iomanager.o
+
+# target to build an object file
+sylar/iomanager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/iomanager.cc.o
+.PHONY : sylar/iomanager.cc.o
+
+sylar/iomanager.i: sylar/iomanager.cc.i
+
+.PHONY : sylar/iomanager.i
+
+# target to preprocess a source file
+sylar/iomanager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/iomanager.cc.i
+.PHONY : sylar/iomanager.cc.i
+
+sylar/iomanager.s: sylar/iomanager.cc.s
+
+.PHONY : sylar/iomanager.s
+
+# target to generate assembly for a file
+sylar/iomanager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/iomanager.cc.s
+.PHONY : sylar/iomanager.cc.s
 
 sylar/log.o: sylar/log.cc.o
 
@@ -398,6 +492,33 @@ sylar/scheduler.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/scheduler.cc.s
 .PHONY : sylar/scheduler.cc.s
 
+sylar/socket.o: sylar/socket.cc.o
+
+.PHONY : sylar/socket.o
+
+# target to build an object file
+sylar/socket.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/socket.cc.o
+.PHONY : sylar/socket.cc.o
+
+sylar/socket.i: sylar/socket.cc.i
+
+.PHONY : sylar/socket.i
+
+# target to preprocess a source file
+sylar/socket.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/socket.cc.i
+.PHONY : sylar/socket.cc.i
+
+sylar/socket.s: sylar/socket.cc.s
+
+.PHONY : sylar/socket.s
+
+# target to generate assembly for a file
+sylar/socket.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/socket.cc.s
+.PHONY : sylar/socket.cc.s
+
 sylar/thread.o: sylar/thread.cc.o
 
 .PHONY : sylar/thread.o
@@ -479,86 +600,32 @@ sylar/utils.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/utils.cc.s
 .PHONY : sylar/utils.cc.s
 
-tests/test.o: tests/test.cc.o
+tests/test_address.o: tests/test_address.cc.o
 
-.PHONY : tests/test.o
-
-# target to build an object file
-tests/test.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cc.o
-.PHONY : tests/test.cc.o
-
-tests/test.i: tests/test.cc.i
-
-.PHONY : tests/test.i
-
-# target to preprocess a source file
-tests/test.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cc.i
-.PHONY : tests/test.cc.i
-
-tests/test.s: tests/test.cc.s
-
-.PHONY : tests/test.s
-
-# target to generate assembly for a file
-tests/test.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cc.s
-.PHONY : tests/test.cc.s
-
-tests/test_IOManager.o: tests/test_IOManager.cc.o
-
-.PHONY : tests/test_IOManager.o
+.PHONY : tests/test_address.o
 
 # target to build an object file
-tests/test_IOManager.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_IOManager.cc.o
-.PHONY : tests/test_IOManager.cc.o
+tests/test_address.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.o
+.PHONY : tests/test_address.cc.o
 
-tests/test_IOManager.i: tests/test_IOManager.cc.i
+tests/test_address.i: tests/test_address.cc.i
 
-.PHONY : tests/test_IOManager.i
-
-# target to preprocess a source file
-tests/test_IOManager.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_IOManager.cc.i
-.PHONY : tests/test_IOManager.cc.i
-
-tests/test_IOManager.s: tests/test_IOManager.cc.s
-
-.PHONY : tests/test_IOManager.s
-
-# target to generate assembly for a file
-tests/test_IOManager.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_IOManager.cc.s
-.PHONY : tests/test_IOManager.cc.s
-
-tests/test_assert.o: tests/test_assert.cc.o
-
-.PHONY : tests/test_assert.o
-
-# target to build an object file
-tests/test_assert.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_assert.dir/build.make CMakeFiles/test_assert.dir/tests/test_assert.cc.o
-.PHONY : tests/test_assert.cc.o
-
-tests/test_assert.i: tests/test_assert.cc.i
-
-.PHONY : tests/test_assert.i
+.PHONY : tests/test_address.i
 
 # target to preprocess a source file
-tests/test_assert.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_assert.dir/build.make CMakeFiles/test_assert.dir/tests/test_assert.cc.i
-.PHONY : tests/test_assert.cc.i
+tests/test_address.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.i
+.PHONY : tests/test_address.cc.i
 
-tests/test_assert.s: tests/test_assert.cc.s
+tests/test_address.s: tests/test_address.cc.s
 
-.PHONY : tests/test_assert.s
+.PHONY : tests/test_address.s
 
 # target to generate assembly for a file
-tests/test_assert.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_assert.dir/build.make CMakeFiles/test_assert.dir/tests/test_assert.cc.s
-.PHONY : tests/test_assert.cc.s
+tests/test_address.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.s
+.PHONY : tests/test_address.cc.s
 
 tests/test_config.o: tests/test_config.cc.o
 
@@ -614,6 +681,60 @@ tests/test_fiber.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s
 .PHONY : tests/test_fiber.cc.s
 
+tests/test_hook.o: tests/test_hook.cc.o
+
+.PHONY : tests/test_hook.o
+
+# target to build an object file
+tests/test_hook.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.o
+.PHONY : tests/test_hook.cc.o
+
+tests/test_hook.i: tests/test_hook.cc.i
+
+.PHONY : tests/test_hook.i
+
+# target to preprocess a source file
+tests/test_hook.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.i
+.PHONY : tests/test_hook.cc.i
+
+tests/test_hook.s: tests/test_hook.cc.s
+
+.PHONY : tests/test_hook.s
+
+# target to generate assembly for a file
+tests/test_hook.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.s
+.PHONY : tests/test_hook.cc.s
+
+tests/test_iomanager.o: tests/test_iomanager.cc.o
+
+.PHONY : tests/test_iomanager.o
+
+# target to build an object file
+tests/test_iomanager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o
+.PHONY : tests/test_iomanager.cc.o
+
+tests/test_iomanager.i: tests/test_iomanager.cc.i
+
+.PHONY : tests/test_iomanager.i
+
+# target to preprocess a source file
+tests/test_iomanager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.i
+.PHONY : tests/test_iomanager.cc.i
+
+tests/test_iomanager.s: tests/test_iomanager.cc.s
+
+.PHONY : tests/test_iomanager.s
+
+# target to generate assembly for a file
+tests/test_iomanager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.s
+.PHONY : tests/test_iomanager.cc.s
+
 tests/test_scheduler.o: tests/test_scheduler.cc.o
 
 .PHONY : tests/test_scheduler.o
@@ -640,6 +761,33 @@ tests/test_scheduler.s: tests/test_scheduler.cc.s
 tests/test_scheduler.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.s
 .PHONY : tests/test_scheduler.cc.s
+
+tests/test_socket.o: tests/test_socket.cc.o
+
+.PHONY : tests/test_socket.o
+
+# target to build an object file
+tests/test_socket.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.o
+.PHONY : tests/test_socket.cc.o
+
+tests/test_socket.i: tests/test_socket.cc.i
+
+.PHONY : tests/test_socket.i
+
+# target to preprocess a source file
+tests/test_socket.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.i
+.PHONY : tests/test_socket.cc.i
+
+tests/test_socket.s: tests/test_socket.cc.s
+
+.PHONY : tests/test_socket.s
+
+# target to generate assembly for a file
+tests/test_socket.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.s
+.PHONY : tests/test_socket.cc.s
 
 tests/test_thread.o: tests/test_thread.cc.o
 
@@ -677,22 +825,32 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... sylar"
-	@echo "... test"
-	@echo "... test_assert"
+	@echo "... test_address"
 	@echo "... test_config"
 	@echo "... test_fiber"
+	@echo "... test_hook"
 	@echo "... test_iomanager"
 	@echo "... test_scheduler"
+	@echo "... test_socket"
 	@echo "... test_thread"
-	@echo "... sylar/IOManager.o"
-	@echo "... sylar/IOManager.i"
-	@echo "... sylar/IOManager.s"
+	@echo "... sylar/address.o"
+	@echo "... sylar/address.i"
+	@echo "... sylar/address.s"
 	@echo "... sylar/config.o"
 	@echo "... sylar/config.i"
 	@echo "... sylar/config.s"
+	@echo "... sylar/fd_manager.o"
+	@echo "... sylar/fd_manager.i"
+	@echo "... sylar/fd_manager.s"
 	@echo "... sylar/fiber.o"
 	@echo "... sylar/fiber.i"
 	@echo "... sylar/fiber.s"
+	@echo "... sylar/hook.o"
+	@echo "... sylar/hook.i"
+	@echo "... sylar/hook.s"
+	@echo "... sylar/iomanager.o"
+	@echo "... sylar/iomanager.i"
+	@echo "... sylar/iomanager.s"
 	@echo "... sylar/log.o"
 	@echo "... sylar/log.i"
 	@echo "... sylar/log.s"
@@ -702,6 +860,9 @@ help:
 	@echo "... sylar/scheduler.o"
 	@echo "... sylar/scheduler.i"
 	@echo "... sylar/scheduler.s"
+	@echo "... sylar/socket.o"
+	@echo "... sylar/socket.i"
+	@echo "... sylar/socket.s"
 	@echo "... sylar/thread.o"
 	@echo "... sylar/thread.i"
 	@echo "... sylar/thread.s"
@@ -711,24 +872,27 @@ help:
 	@echo "... sylar/utils.o"
 	@echo "... sylar/utils.i"
 	@echo "... sylar/utils.s"
-	@echo "... tests/test.o"
-	@echo "... tests/test.i"
-	@echo "... tests/test.s"
-	@echo "... tests/test_IOManager.o"
-	@echo "... tests/test_IOManager.i"
-	@echo "... tests/test_IOManager.s"
-	@echo "... tests/test_assert.o"
-	@echo "... tests/test_assert.i"
-	@echo "... tests/test_assert.s"
+	@echo "... tests/test_address.o"
+	@echo "... tests/test_address.i"
+	@echo "... tests/test_address.s"
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
 	@echo "... tests/test_fiber.o"
 	@echo "... tests/test_fiber.i"
 	@echo "... tests/test_fiber.s"
+	@echo "... tests/test_hook.o"
+	@echo "... tests/test_hook.i"
+	@echo "... tests/test_hook.s"
+	@echo "... tests/test_iomanager.o"
+	@echo "... tests/test_iomanager.i"
+	@echo "... tests/test_iomanager.s"
 	@echo "... tests/test_scheduler.o"
 	@echo "... tests/test_scheduler.i"
 	@echo "... tests/test_scheduler.s"
+	@echo "... tests/test_socket.o"
+	@echo "... tests/test_socket.i"
+	@echo "... tests/test_socket.s"
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"

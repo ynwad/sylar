@@ -17,7 +17,7 @@
 #include "macro.h"
 #include "utils.h"
 #include "thread.h"
-#include "sigleton.h"
+#include "singleton.h"
 #include "fiber.h"
 #include "scheduler.h"
 
