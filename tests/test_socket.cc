@@ -24,6 +24,7 @@ void test_socket() {
     }
 
     sylar::Socket::ptr sock = sylar::Socket::CreateTCP(addr);
+    SYLAR_LOG_INFO(g_looger) << "LocalAddress1: " << sock->getLocalAddress()->toString();
     addr->setPort(80);
     SYLAR_LOG_INFO(g_looger) << "addr=" << addr->toString();
     if(!sock->connect(addr)) {
@@ -32,6 +33,7 @@ void test_socket() {
     } else {
         SYLAR_LOG_INFO(g_looger) << "connect " << addr->toString() << " connected";
     }
+    SYLAR_LOG_INFO(g_looger) << "LocalAddress2: " << sock->getLocalAddress()->toString();
 
     const char buff[] = "GET / HTTP/1.0\r\n\r\n";
     int rt = sock->send(buff, sizeof(buff));
@@ -115,7 +117,7 @@ void test_socket3() {
         return;
     }
 
-    sylar::SSLSocket::ptr sock = sylar::SSLSocket::CreateTCP(addr);
+    sylar::Socket::ptr sock = sylar::SSLSocket::CreateTCP(addr);
     addr->setPort(443);
     SYLAR_LOG_INFO(g_looger) << "addr=" << addr->toString();
     if(!sock->connect(addr)) {
@@ -148,7 +150,7 @@ void test_socket3() {
 
 int main(int argc, char** argv) {
     sylar::IOManager iom;
+    // iom.schedule(&test_socket);
     iom.schedule(&test_socket3);
-    // iom.schedule(&test2);
     return 0;
 }

@@ -6,6 +6,7 @@
 /home/ynwad/workspace/sylar/CMakeFiles/test_fiber.dir
 /home/ynwad/workspace/sylar/CMakeFiles/edit_cache.dir
 /home/ynwad/workspace/sylar/CMakeFiles/test_thread.dir
+/home/ynwad/workspace/sylar/CMakeFiles/test_bytearray.dir
 /home/ynwad/workspace/sylar/CMakeFiles/test_config.dir
 /home/ynwad/workspace/sylar/CMakeFiles/test_hook.dir
 /home/ynwad/workspace/sylar/CMakeFiles/sylar.dir
