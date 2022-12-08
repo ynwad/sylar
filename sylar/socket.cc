@@ -118,6 +118,7 @@ bool Socket::setOption(int level, int option, const void* result, socklen_t len)
 Socket::ptr Socket::accept() {
     Socket::ptr sock(new Socket(m_family, m_type, m_protocol));
     int newsock = ::accept(m_sock, nullptr, nullptr);
+
     if(newsock == -1) {
         SYLAR_LOG_ERROR(g_logger) << "accept(" << m_sock << ") errno="
             << errno << " errstr=" << strerror(errno);

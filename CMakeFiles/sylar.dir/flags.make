@@ -36,3 +36,23 @@ CXX_FLAGS =  -pthread -rdynamic -O0 -g -std=c++11 -Wall -Wno-deprecated -Werror 
 
 # Custom defines: CMakeFiles/sylar.dir/sylar/bytearray.cc.o_DEFINES = __FILE__="sylar/bytearray.cc"
 
+# Custom defines: CMakeFiles/sylar.dir/sylar/http/http.cc.o_DEFINES = __FILE__="sylar/http/http.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o_DEFINES = __FILE__="sylar/http/http_parser.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/tcp_server.cc.o_DEFINES = __FILE__="sylar/tcp_server.cc";__FILE__="sylar/tcp_server.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/stream.cc.o_DEFINES = __FILE__="sylar/stream.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o_DEFINES = __FILE__="sylar/streams/socket_stream.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/http/http_session.cc.o_DEFINES = __FILE__="sylar/http/http_session.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/http/servlets/config_servlet.cc.o_DEFINES = __FILE__="sylar/http/servlets/config_servlet.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/http/servlets/status_servlet.cc.o_DEFINES = __FILE__="sylar/http/servlets/status_servlet.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/http/http11_parser.rl.cc.o_DEFINES = __FILE__="sylar/http/http11_parser.rl.cc"
+
+# Custom defines: CMakeFiles/sylar.dir/sylar/http/httpclient_parser.rl.cc.o_DEFINES = __FILE__="sylar/http/httpclient_parser.rl.cc"
+

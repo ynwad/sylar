@@ -69,6 +69,100 @@ CMakeFiles/sylar.dir/sylar/hook.cc.o
  /home/ynwad/workspace/sylar/sylar/thread.h
  /home/ynwad/workspace/sylar/sylar/timer.h
  /home/ynwad/workspace/sylar/sylar/utils.h
+CMakeFiles/sylar.dir/sylar/http/http.cc.o
+ /home/ynwad/workspace/sylar/sylar/http/http.cc
+ /home/ynwad/workspace/sylar/sylar/http/http.h
+ sylar/utils.h
+CMakeFiles/sylar.dir/sylar/http/http11_parser.rl.cc.o
+ /home/ynwad/workspace/sylar/sylar/http/http11_common.h
+ /home/ynwad/workspace/sylar/sylar/http/http11_parser.h
+ /home/ynwad/workspace/sylar/sylar/http/http11_parser.rl.cc
+CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o
+ /home/ynwad/workspace/sylar/sylar/http/http.h
+ /home/ynwad/workspace/sylar/sylar/http/http11_common.h
+ /home/ynwad/workspace/sylar/sylar/http/http11_parser.h
+ /home/ynwad/workspace/sylar/sylar/http/http_parser.cc
+ /home/ynwad/workspace/sylar/sylar/http/http_parser.h
+ /home/ynwad/workspace/sylar/sylar/http/httpclient_parser.h
+ sylar/config.h
+ sylar/log.h
+ sylar/macro.h
+ sylar/mutex.h
+ sylar/noncopyable.h
+ sylar/singleton.h
+ sylar/thread.h
+ sylar/utils.h
+CMakeFiles/sylar.dir/sylar/http/http_session.cc.o
+ /home/ynwad/workspace/sylar/sylar/http/http.h
+ /home/ynwad/workspace/sylar/sylar/http/http11_common.h
+ /home/ynwad/workspace/sylar/sylar/http/http11_parser.h
+ /home/ynwad/workspace/sylar/sylar/http/http_parser.h
+ /home/ynwad/workspace/sylar/sylar/http/http_session.cc
+ /home/ynwad/workspace/sylar/sylar/http/http_session.h
+ /home/ynwad/workspace/sylar/sylar/http/httpclient_parser.h
+ sylar/address.h
+ sylar/bytearray.h
+ sylar/fiber.h
+ sylar/iomanager.h
+ sylar/mutex.h
+ sylar/noncopyable.h
+ sylar/scheduler.h
+ sylar/socket.h
+ sylar/stream.h
+ sylar/streams/socket_stream.h
+ sylar/thread.h
+ sylar/timer.h
+CMakeFiles/sylar.dir/sylar/http/httpclient_parser.rl.cc.o
+ /home/ynwad/workspace/sylar/sylar/http/http11_common.h
+ /home/ynwad/workspace/sylar/sylar/http/httpclient_parser.h
+ /home/ynwad/workspace/sylar/sylar/http/httpclient_parser.rl.cc
+CMakeFiles/sylar.dir/sylar/http/servlets/config_servlet.cc.o
+ /home/ynwad/workspace/sylar/sylar/http/servlets/config_servlet.cc
+ /home/ynwad/workspace/sylar/sylar/http/servlets/config_servlet.h
+ sylar/address.h
+ sylar/bytearray.h
+ sylar/config.h
+ sylar/fiber.h
+ sylar/http/http.h
+ sylar/http/http_session.h
+ sylar/http/servlet.h
+ sylar/iomanager.h
+ sylar/log.h
+ sylar/macro.h
+ sylar/mutex.h
+ sylar/noncopyable.h
+ sylar/scheduler.h
+ sylar/singleton.h
+ sylar/socket.h
+ sylar/stream.h
+ sylar/streams/socket_stream.h
+ sylar/thread.h
+ sylar/timer.h
+ sylar/utils.h
+CMakeFiles/sylar.dir/sylar/http/servlets/status_servlet.cc.o
+ /home/ynwad/workspace/sylar/sylar/http/servlets/status_servlet.cc
+ /home/ynwad/workspace/sylar/sylar/http/servlets/status_servlet.h
+ sylar/address.h
+ sylar/bytearray.h
+ sylar/config.h
+ sylar/fiber.h
+ sylar/http/http.h
+ sylar/http/http_session.h
+ sylar/http/servlet.h
+ sylar/iomanager.h
+ sylar/log.h
+ sylar/macro.h
+ sylar/mutex.h
+ sylar/noncopyable.h
+ sylar/scheduler.h
+ sylar/singleton.h
+ sylar/socket.h
+ sylar/stream.h
+ sylar/streams/socket_stream.h
+ sylar/sylar.h
+ sylar/thread.h
+ sylar/timer.h
+ sylar/utils.h
 CMakeFiles/sylar.dir/sylar/iomanager.cc.o
  /home/ynwad/workspace/sylar/sylar/fiber.h
  /home/ynwad/workspace/sylar/sylar/iomanager.cc
@@ -121,6 +215,42 @@ CMakeFiles/sylar.dir/sylar/socket.cc.o
  /home/ynwad/workspace/sylar/sylar/singleton.h
  /home/ynwad/workspace/sylar/sylar/socket.cc
  /home/ynwad/workspace/sylar/sylar/socket.h
+ /home/ynwad/workspace/sylar/sylar/thread.h
+ /home/ynwad/workspace/sylar/sylar/timer.h
+ /home/ynwad/workspace/sylar/sylar/utils.h
+CMakeFiles/sylar.dir/sylar/stream.cc.o
+ /home/ynwad/workspace/sylar/sylar/bytearray.h
+ /home/ynwad/workspace/sylar/sylar/stream.cc
+ /home/ynwad/workspace/sylar/sylar/stream.h
+CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o
+ /home/ynwad/workspace/sylar/sylar/streams/socket_stream.cc
+ /home/ynwad/workspace/sylar/sylar/streams/socket_stream.h
+ sylar/address.h
+ sylar/bytearray.h
+ sylar/fiber.h
+ sylar/iomanager.h
+ sylar/mutex.h
+ sylar/noncopyable.h
+ sylar/scheduler.h
+ sylar/socket.h
+ sylar/stream.h
+ sylar/thread.h
+ sylar/timer.h
+ sylar/utils.h
+CMakeFiles/sylar.dir/sylar/tcp_server.cc.o
+ /home/ynwad/workspace/sylar/sylar/address.h
+ /home/ynwad/workspace/sylar/sylar/config.h
+ /home/ynwad/workspace/sylar/sylar/fiber.h
+ /home/ynwad/workspace/sylar/sylar/iomanager.h
+ /home/ynwad/workspace/sylar/sylar/log.h
+ /home/ynwad/workspace/sylar/sylar/macro.h
+ /home/ynwad/workspace/sylar/sylar/mutex.h
+ /home/ynwad/workspace/sylar/sylar/noncopyable.h
+ /home/ynwad/workspace/sylar/sylar/scheduler.h
+ /home/ynwad/workspace/sylar/sylar/singleton.h
+ /home/ynwad/workspace/sylar/sylar/socket.h
+ /home/ynwad/workspace/sylar/sylar/tcp_server.cc
+ /home/ynwad/workspace/sylar/sylar/tcp_server.h
  /home/ynwad/workspace/sylar/sylar/thread.h
  /home/ynwad/workspace/sylar/sylar/timer.h
  /home/ynwad/workspace/sylar/sylar/utils.h
